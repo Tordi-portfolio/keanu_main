@@ -1,126 +1,758 @@
 {% extends 'base2.html' %}
-
 {% block content %}
-  <style>
-    body {
-      background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
-      color: #e8e8e8;
-    }
+<style>
+  body {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    font-family: 'Segoe UI', sans-serif;
+    color: #e8e8e8;
+  }
 
-    .author-section {
-      animation: fadeIn 1.5s ease-in-out;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(255, 60, 0, 0.2);
-      backdrop-filter: blur(6px);
-    }
+  .keanu-bio-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.9;
+  }
 
-    .author-title {
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      text-align: center;
-      text-shadow: 2px 2px 8px rgba(255, 60, 0, 0.6);
-      margin-bottom: 1.5rem;
-    }
+  h1, h2 {
+    color: #ff3c00;
+    text-shadow: 0 0 8px rgba(255, 60, 0, 0.5);
+  }
 
-    .author-block {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #ddd;
-      text-align: justify;
-      margin-bottom: 2rem;
-    }
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
-    .author-block span {
-      color: var(--accent-color);
-      font-weight: 600;
-    }
+  h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
 
-    .quote {
-      margin-top: 2rem;
-      padding: 1rem 1.5rem;
-      border-left: 4px solid var(--accent-color);
-      background: rgba(255, 255, 255, 0.02);
-      font-style: italic;
-      font-size: 1.1rem;
-      color: #bbb;
-      box-shadow: inset 0 0 10px rgba(255, 60, 0, 0.1);
-    }
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
 
-    .cta-button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.8rem 1.8rem;
-      background: var(--accent-color);
-      color: #fff;
-      font-weight: bold;
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.4rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    p {
       font-size: 1rem;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(255, 60, 0, 0.4);
-      transition: 0.3s ease;
     }
+  }
+</style>
 
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 60, 0, 0.6);
+<div class="keanu-bio-container">
+  <h1>Keanu Reeves: A Life Lived Well</h1>
+
+  <h2> Roots & Childhood (1964–1978)</h2>
+
+  <p>
+    Keanu Charles Reeves was born on September 2, 1964, in Beirut, Lebanon. His life began amidst a whirlwind of cultures and transitions that would come to shape his distinctive personality. His mother, Patricia Taylor, was a British showgirl and costume designer, known for her creative flair and nomadic spirit. His father, Samuel Nowlin Reeves Jr., was a Hawaiian-born American with Chinese, Portuguese, Irish, and Native Hawaiian heritage. This rich cultural blend would follow Keanu throughout his life, both grounding and complicating his sense of identity.
+  </p>
+
+  <p>
+    The early days of Keanu’s life were far from ordinary. When he was just three years old, his parents separated. His father, a geologist by profession but a troubled man in practice, struggled with addiction and eventually faded from Keanu’s life completely. Samuel was arrested for drug offenses and never returned. Keanu last saw him when he was 13. That absence would leave a quiet void, and Keanu rarely spoke publicly about it. Instead, he focused inward, seeking strength in himself and the people around him.
+  </p>
+
+  <p>
+    Patricia, strong-willed and artistic, moved Keanu and his younger sister Kim from Beirut to Australia, then to New York City, and finally to Toronto, Canada. In each city, she worked tirelessly, designing costumes for stage performers and entertainers. Keanu’s childhood, therefore, was one of movement — new cities, new schools, new stepfathers. By the time he was a teenager, he had lived in more places than most kids visit in a lifetime.
+  </p>
+
+  <p>
+    In Toronto, where the family finally settled, Keanu was granted Canadian citizenship and began what would be the most formative years of his youth. He attended four different high schools, including the prestigious Etobicoke School of the Arts. But formal education never resonated with him. Diagnosed with dyslexia, Keanu found reading and writing to be a challenge. He struggled to focus in class and often felt like an outsider, out of sync with traditional education systems. Yet he was curious — deeply curious. He absorbed things in his own way, often through experience, observation, and instinct.
+  </p>
+
+  <p>
+    While academics were difficult, Keanu found purpose in two places: ice hockey and acting. As a goaltender, he earned the nickname “The Wall” for his incredible reflexes and quiet determination on the ice. Hockey became more than a sport — it was a sanctuary, a form of meditation. He even considered going pro, and for a while, that seemed like the plan. But destiny had other ideas.
+  </p>
+
+  <p>
+    At home, Patricia continued to remarry and separate, eventually bringing a series of father figures into Keanu's life. Each brought their own perspective, and while it may have created a sense of instability, it also exposed Keanu to a wide range of personalities, from musicians to filmmakers. The house was often filled with artistic energy, something that seeped into Keanu’s own developing interests.
+  </p>
+
+  <p>
+    His first exposure to acting came through a school play. The stage felt like a place where he could express himself without fear of judgment — where his internal world could come alive in a way that school and conversation couldn’t quite capture. The idea of stepping into someone else’s shoes, of losing himself in character, sparked a sense of freedom and fascination.
+  </p>
+
+  <p>
+    Though he didn’t yet know it, those formative years were laying the groundwork for the man the world would one day call “the most humble celebrity on Earth.” Keanu Reeves' story had begun not with Hollywood glitz or red carpet premieres, but with displacement, adversity, and a quiet inner fire.
+  </p>
+
+  <p>
+    By the age of 14, he was already navigating adult decisions — shaping his identity while caring for his younger sister and managing his complex relationship with his mother. It was a turbulent, transient childhood, but one that would forge a deep sense of empathy, independence, and emotional depth that became visible in nearly every role he’d eventually play.
+  </p>
+
+  <p>
+    The next chapter in Keanu’s life would take him from the cold ice rinks of Canada to the warm lights of the stage — and later, the unrelenting spotlight of global fame.
+  </p>
+</div>
+
+
+
+<style>
+  body {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    font-family: 'Segoe UI', sans-serif;
+    color: #e8e8e8;
+
+  }
+
+  .keanu-bio-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.9;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #ff3c00;
+    text-shadow: 0 0 8px rgba(255, 60, 0, 0.5);
+    margin-top: 2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.6rem;
     }
-
-    @media (max-width: 768px) {
-      .author-title {
-        font-size: 2rem;
-      }
-
-      .author-block {
-        font-size: 1rem;
-      }
-
-      .quote {
-        font-size: 1rem;
-      }
+    p {
+      font-size: 1rem;
     }
+  }
+</style>
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+<div class="keanu-bio-container">
+  <h2> Teenage Years – Hockey & Dyslexia (1978–1984)</h2>
+
+  <p>
+    By the late 1970s, Keanu Reeves was entering his teenage years with a quiet intensity that belied his age. Life in Toronto was a constant juggling act: changing schools, navigating identity, and trying to find a place to belong. For Keanu, who had now experienced multiple stepfathers, varying school curriculums, and a fractured paternal bond, adolescence wasn't just about self-discovery — it was survival of the soul.
+  </p>
+
+  <p>
+    Academically, things were tough. Keanu had dyslexia, a learning difference that made reading and processing information extremely difficult. Where other students could breeze through books and lessons, Keanu found himself constantly falling behind, misunderstood by teachers, and frustrated by his own mind. But instead of giving in, he developed a different strategy: observe, memorize, intuit. These skills, honed out of necessity, would later become secret weapons in his acting career.
+  </p>
+
+  <p>
+    His inability to sit still in a classroom wasn’t a sign of rebellion — it was a cry for a different kind of learning. His brain worked visually, emotionally, instinctually. While others might rely on theory, Keanu learned by doing. Unfortunately, the rigid education system didn’t accommodate such nuance. He transferred between multiple schools — De La Salle College, Avondale Secondary Alternative School, and the Etobicoke School of the Arts — but none seemed to fit. Eventually, he dropped out before earning a high school diploma.
+  </p>
+
+  <p>
+    But Keanu was far from lost. While school proved difficult, the ice rink became his sanctuary. As a goaltender in youth hockey leagues, he was fiercely competitive, focused, and unshakable in his calm under pressure. Teammates admired his ability to anticipate moves and stay composed during high-stress moments. It wasn’t just a sport to him — it was a form of meditation.
+  </p>
+
+  <p>
+    His performance on the ice was so impressive that coaches believed he had the potential to go pro. He played for De La Salle's hockey team, where he became known as “The Wall” — a nickname earned through pure grit and determination. In another life, Keanu Reeves might have become a professional NHL player. The dream was real — right up until the moment acting took over.
+  </p>
+
+  <p>
+    Parallel to his athletic career, Keanu’s interest in drama deepened. He was cast in school plays and local theatre productions, and something about the stage called to him on a cellular level. While hockey allowed him to channel his energy physically, acting allowed him to channel his emotional complexity. It was a revelation — he could express all the things he struggled to articulate in everyday conversation.
+  </p>
+
+  <p>
+    One of his earliest professional gigs was working as a correspondent for the Canadian Broadcasting Corporation (CBC) youth program <em>Going Great</em>. The opportunity taught him the importance of poise and presence in front of a camera, while also giving him his first taste of a broadcasting studio. Around this time, he also took odd jobs — tree trimming, sharpening skates, managing a pasta stand — doing whatever he could to support himself and stay close to the performing arts.
+  </p>
+
+  <p>
+    At 15, he made a pact with himself: if acting felt right, he’d pursue it with his whole heart. So he started auditioning more seriously. By 19, he landed a small role in the CBC television show <em>Hangin’ In</em>, followed by commercials and off-stage voice work. It was his foot in the door — a crack in the armor of Hollywood that would slowly open over the next few years.
+  </p>
+
+  <p>
+    This period of Keanu’s life was marked by a rare fusion of grit and sensitivity. While many teens struggled to find their place, Keanu began laying the foundation for an extraordinary life — not by fitting in, but by embracing his uniqueness. He chose passion over predictability, instinct over instruction, and artistry over accolades.
+  </p>
+
+  <p>
+    These teenage years were raw and unpolished, but they were also sacred. They proved that Keanu didn’t need to follow the traditional script to create a meaningful path. His early struggles with dyslexia taught him emotional intelligence; his hockey background gave him resilience and focus; his drama work gave him purpose. He was ready — not yet for stardom, but for something far greater: to begin building a life of creative integrity.
+  </p>
+
+  <p>
+    As he packed up his few belongings and prepared to move to Los Angeles in search of acting opportunities, there was no guarantee of success. But Keanu carried something stronger than certainty: the quiet conviction that his journey had only just begun.
+  </p>
+</div>
+
+
+
+<style>
+  body {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    font-family: 'Segoe UI', sans-serif;
+    color: #e8e8e8;
+
+  }
+
+  .keanu-bio-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.9;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #ff3c00;
+    text-shadow: 0 0 8px rgba(255, 60, 0, 0.5);
+    margin-top: 2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.6rem;
     }
-  </style>
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
 
-  <div class="author-section">
-    <div class="author-title">All About Jason Momoa</div>
+<div class="keanu-bio-container">
+  <h2> Breaking Through – First Roles & Move to Hollywood (1985–1989)</h2>
 
-    <div class="author-block">
-      <span>Jason Momoa</span> is more than a Hollywood name—he’s a creative force of nature. Known for his legendary roles as <span>Aquaman</span> and <span>Khal Drogo</span>, Jason brings strength, vulnerability, and authenticity to every screen he steps onto. But his story doesn’t stop at the surface.
-    </div>
+  <p>
+    In the mid-1980s, Keanu Reeves took a leap of faith that would define the rest of his life. Armed with a few hundred dollars, a second-hand car, and a passion for storytelling, he made the move from Toronto to Los Angeles. He wasn’t just changing cities — he was leaving behind comfort, familiarity, and certainty in pursuit of something greater: a career in film.
+  </p>
 
-    <div class="author-block">
-      As a <span>producer, director, and writer</span>, Jason is deeply involved in shaping the stories he tells. He founded <span>Pride of Gypsies</span>, a production company focused on soulful, untamed, and visually arresting work. He doesn’t just act—he crafts experiences.
-    </div>
+  <p>
+    Early on, Keanu's charm and presence quickly caught the attention of casting directors. But what really set him apart was his quiet intensity — a soulful introspection that stood out in an era of big personalities and larger-than-life performances. He wasn’t the loudest person in the room, but he was the most present.
+  </p>
 
-    <div class="author-block">
-      When he's not on set, Jason is in the wild—<span>rock climbing, surfing, building motorcycles</span>, or sitting in the dirt with his children. His soul belongs to nature, and he’s a vocal advocate for <span>clean oceans, sustainable living, and Indigenous rights</span>.
-    </div>
+  <p>
+    His first notable film role came in 1986 with <strong><em>River’s Edge</em></strong>, a dark indie drama that explored teen alienation, murder, and moral ambiguity. Critics were impressed by the depth he brought to his role, and the film gained a cult following. It was a bold, complex part — and for Keanu, a signal that he didn’t need to follow the usual teen heartthrob route. He could be something different. He could be real.
+  </p>
 
-    <div class="author-block">
-      Family is everything. Culture is everything. Jason proudly honors his <span>Native Hawaiian roots</span>, and raises his kids with values of respect, earth connection, and fearlessness. He’s not trying to be perfect—he’s trying to be real.
-    </div>
+  <p>
+    The late 1980s saw a series of roles that showcased his range. In <strong><em>Permanent Record</em></strong> (1988), he played a high school student coping with the suicide of a friend — again delving into emotionally challenging territory. In <strong><em>Dangerous Liaisons</em></strong> (1988), he shared the screen with acting legends like Glenn Close and John Malkovich, proving that he could hold his own in sophisticated period dramas.
+  </p>
 
-    <div class="author-block">
-      Whether he’s sketching a tattoo design, building a custom bike, filming a documentary, or hugging a tree, Jason lives a life of fire, creation, and love. His work is bold. His legacy is rising. And through it all, he stays grounded by his people, his passions, and his purpose.
-    </div>
+  <p>
+    But the turning point came in 1989 with <strong><em>Bill & Ted’s Excellent Adventure</em></strong>. The film — a quirky, time-traveling buddy comedy about two metalhead teens — was a surprise hit. Keanu’s portrayal of the lovable, airheaded Ted "Theodore" Logan became iconic almost overnight. His natural comedic timing and effortless chemistry with co-star Alex Winter gave birth to a cultural phenomenon. Audiences loved him.
+  </p>
 
-    <div class="quote">
-      "I want to use my life to protect the things I love—my family, my culture, and this earth. That’s the legacy I care about.”<br>— Jason Momoa
-    </div>
+  <p>
+    Suddenly, Keanu wasn’t just a rising actor — he was a star. But even as fame approached, he remained grounded. He shied away from Hollywood parties, avoided the gossip columns, and stuck to a close-knit circle of friends and collaborators. What mattered to him was not celebrity — it was craft.
+  </p>
 
-    <a href="#" class="cta-button">Explore My Journey</a>
+  <p>
+    During this period, Keanu also began branching out artistically. He developed a love for poetry and writing, often jotting down philosophical musings and snippets of prose. He explored the Los Angeles underground music scene and maintained a strong connection with the theatre, starring in stage productions when time allowed.
+  </p>
+
+  <p>
+    Beneath the surface of his breakout roles, Keanu was quietly building something bigger — a career defined not by hype, but by authenticity and range. He wasn’t interested in being typecast. He wanted to stretch, to learn, to evolve.
+  </p>
+
+  <p>
+    By the end of the 1980s, Keanu Reeves had gone from a dyslexic teen in Toronto to a certified rising star in Hollywood. He had proven that he could handle darkness, comedy, drama, and everything in between. But he was just getting started. Ahead lay roles that would redefine action cinema, push philosophical boundaries, and ultimately cement his legacy.
+  </p>
+</div>
+
+
+
+<style>
+  body {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    font-family: 'Segoe UI', sans-serif;
+
+  }
+
+  .keanu-bio-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.9;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #ff3c00;
+    text-shadow: 0 0 8px rgba(255, 60, 0, 0.5);
+    margin-top: 2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="keanu-bio-container">
+  <h2> Stardom – <em>Speed</em>, <em>The Matrix</em>, and Icon Status (1990–2003)</h2>
+
+  <p>
+    The 1990s marked a new era for Keanu Reeves — not just as an actor, but as a cinematic force. This was the decade where he transitioned from being a recognizable face to a global icon. But the journey wasn’t just paved with hit movies; it was also filled with risk-taking, transformation, and an ever-deepening sense of purpose.
+  </p>
+
+  <p>
+    In 1991, Keanu took on a role that shocked many — the sensitive, emotionally raw street hustler in Gus Van Sant’s indie masterpiece <strong><em>My Own Private Idaho</em></strong>. Acting opposite River Phoenix, Keanu delivered a haunting, vulnerable performance that displayed a new side of his artistry. The film became a cult classic and further proved that he wasn’t afraid to dive into complex and unconventional characters.
+  </p>
+
+  <p>
+    That same year, he reunited with his goofy alter ego in <em>Bill & Ted’s Bogus Journey</em>, reminding audiences that he was as versatile as he was grounded. He kept oscillating between major Hollywood productions and artistic gambles — including roles in <strong><em>Bram Stoker’s Dracula</em></strong> (1992), <strong><em>Much Ado About Nothing</em></strong> (1993), and Bernardo Bertolucci’s <em>Little Buddha</em> (1993).
+  </p>
+
+  <p>
+    But it was 1994 that changed everything. <strong><em>Speed</em></strong>, an adrenaline-pumping thriller about a bus rigged with explosives, became a worldwide phenomenon. Paired with Sandra Bullock, Keanu played LAPD officer Jack Traven — a character that was brave, understated, and deeply human. The film was a runaway success, grossing over $350 million and launching Keanu into the upper echelon of Hollywood stardom.
+  </p>
+
+  <p>
+    Yet Keanu, in typical fashion, turned down <em>Speed 2</em>. He wasn’t chasing sequels — he was chasing substance. He went on to appear in <strong><em>A Walk in the Clouds</em></strong> (1995), <strong><em>Johnny Mnemonic</em></strong>, and <strong><em>Chain Reaction</em></strong>, always searching for roles that aligned with his curious, soulful nature.
+  </p>
+
+  <p>
+    The late 1990s brought him to a role that would define a generation. In 1999, Keanu stepped into the world of digital realities, simulated truths, and philosophical questions about existence itself in <strong><em>The Matrix</em></strong>. As Neo — the computer hacker turned savior of humanity — Keanu didn’t just play a hero. He embodied a symbol.
+  </p>
+
+  <p>
+    <em>The Matrix</em> wasn’t just a blockbuster. It was a cultural reset. The film blended martial arts, philosophy, cyberpunk aesthetics, and special effects that redefined action cinema. “Bullet time” became a global sensation, and Neo’s journey from confusion to liberation resonated with audiences across the world. It spoke to the idea that we’re all meant for more — that waking up means seeing the world with new eyes.
+  </p>
+
+  <p>
+    For Keanu, the impact was transformative. He trained for months in martial arts, wirework, and meditation to prepare for the role. He gave much of his salary from the sequels — <em>The Matrix Reloaded</em> and <em>The Matrix Revolutions</em> (both released in 2003) — to the stunt team and special effects artists, recognizing that they were the heart of the magic. To him, humility wasn’t an act. It was a principle.
+  </p>
+
+  <p>
+    By the early 2000s, Keanu had become one of the most recognizable figures in cinema. But more importantly, he had become a symbol of quiet integrity. While tabloids chased scandals and drama from others, Keanu remained focused on craft and kindness. He gave away millions in bonuses to crew members, rode the subway, and lived a life far simpler than his peers.
+  </p>
+
+  <p>
+    During this period, he also explored music — playing bass in the alt-rock band Dogstar — and continued to seek out small, intimate projects that challenged him. Films like <em>The Gift</em> and <em>Sweet November</em> reminded fans that behind the blockbuster hero was a man who still loved poetry, pain, and performance.
+  </p>
+
+  <p>
+    The 1990s and early 2000s solidified Keanu Reeves as a legend — not just because of what he did on screen, but because of how he carried himself off it. He was famous, but not flashy. Rich, but not boastful. Revered, but never unreachable.
+  </p>
+
+  <p>
+    And through it all, Keanu remained an enigma — a gentle soul wrapped in black suits and trench coats, navigating fame with grace, silence, and a kind of honesty that felt increasingly rare in Hollywood.
+  </p>
+</div>
+
+
+
+<style>
+  body {
+    background: linear-gradient(to bottom, #111111, #1d1d1d);
+    font-family: 'Segoe UI', sans-serif;
+    color: #e6e6e6;
+
+  }
+
+  .keanu-bio-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.9;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #ff3c00;
+    text-shadow: 0 0 8px rgba(255, 60, 0, 0.5);
+    margin-top: 2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="keanu-bio-section">
+  <h2> Tragedy, Reflection & Resilience (2000–2010)</h2>
+
+  <p>
+    Behind Keanu Reeves' calm demeanor and cinematic success lies a decade marked by deep personal sorrow — a chapter of his life that tested the limits of the human spirit. The early 2000s would not only define him as a star but also as a survivor. His humility, generosity, and strength are rooted not just in philosophy or discipline, but in grief and healing.
+  </p>
+
+  <p>
+    In 1999, just as <strong><em>The Matrix</em></strong> was premiering, Keanu and his then-girlfriend Jennifer Syme experienced the devastating loss of their stillborn daughter, Ava Archer Syme-Reeves. The pain of losing a child is indescribable, and it cast a shadow over what should have been one of the most successful moments of his career.
+  </p>
+
+  <p>
+    The tragedy drove a wedge between the couple, and despite their efforts to remain close, their relationship ended. In 2001, heartbreak struck again when Jennifer Syme died in a car accident. These back-to-back losses left Keanu deeply wounded. Unlike many celebrities who turn their grief into public spectacles, Keanu turned inward.
+  </p>
+
+  <p>
+    He didn’t run to the cameras or issue tearful interviews. Instead, he disappeared into the quiet. Into his craft. Into introspection. In interviews years later, Keanu would reflect, “Grief changes shape, but it never ends.” His statements about loss resonated deeply with fans around the world who had gone through similar experiences.
+  </p>
+
+  <p>
+    But even as he grieved, Keanu kept creating. In 2001, he starred in <em>Sweet November</em>, a romantic drama that, by coincidence or fate, centered around themes of life, love, and terminal illness. Audiences found the film sentimental, but for Keanu, it was likely a deeply personal experience.
+  </p>
+
+  <p>
+    Throughout the decade, he continued to work steadily — appearing in films like <strong><em>Constantine</em></strong> (2005), where he played a cynical exorcist battling both internal and external demons. The role felt raw, charged with the energy of a man wrestling with his own ghosts. In <em>The Lake House</em> (2006), he reunited with Sandra Bullock in a film that centered on love lost and time’s inability to erase emotion — a theme that once again mirrored his own narrative.
+  </p>
+
+  <p>
+    He also starred in <strong><em>A Scanner Darkly</em></strong> (2006), a cerebral, animated sci-fi thriller based on Philip K. Dick’s dystopian vision. The story’s central themes of identity, surveillance, and reality breakdown seemed tailor-made for Keanu’s quiet, philosophical presence.
+  </p>
+
+  <p>
+    During this decade, Keanu also began directing. In 2013, his directorial debut <strong><em>Man of Tai Chi</em></strong> was in development — a film rooted in martial arts, philosophy, and East-meets-West spirituality. It was a culmination of everything Keanu had absorbed throughout his career: action, calmness, silence, and meaning.
+  </p>
+
+  <p>
+    Away from Hollywood, Keanu became known for his random acts of kindness — stories began surfacing of him secretly funding crew members’ cancer treatments, giving up his seat on public transport, and spending hours with homeless people without cameras, without fanfare. His fans started calling him "The Internet’s Boyfriend" and "Hollywood’s Most Humble Man."
+  </p>
+
+  <p>
+    In 2008, he starred in <strong><em>The Day the Earth Stood Still</em></strong>, a remake of the 1951 classic. While the film received mixed reviews, Keanu’s stoic portrayal of the alien Klaatu perfectly embodied his quiet, observant, and enigmatic aura. It reminded audiences that science fiction, at its best, was about asking the biggest questions with the smallest gestures.
+  </p>
+
+  <p>
+    The decade ended with Keanu not at the top of the box office, but standing quietly at the intersection of loss and legacy. He had endured personal hell, and emerged not hardened, but more compassionate. He had become a vessel for reflection, for philosophical cinema, and for resilience without ego.
+  </p>
+
+  <p>
+    The 2000s weren’t about stardom for Keanu. They were about survival. About finding meaning in the mess. About realizing that even if you’re “The One” on screen, you can still be broken in real life — and still keep going.
+  </p>
+
+  <p>
+    He was no longer just a celebrity. He was a symbol of grace under pain. And his journey — quiet, real, and raw — continued to inspire millions who saw in him not just Neo or Constantine, but a fellow human being fighting to heal.
+  </p>
+</div>
+
+
+
+<style>
+  body {
+    background: linear-gradient(to bottom, #121212, #1c1c1c);
+    font-family: 'Segoe UI', sans-serif;
+    color: #f0f0f0;
+  }
+
+  .keanu-bio-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.9;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #ff3c00;
+    text-shadow: 0 0 8px rgba(255, 60, 0, 0.5);
+    margin-top: 2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="keanu-bio-section">
+  <h2> John Wick, Redemption & Cultural Rebirth (2014–2020)</h2>
+
+  <p>
+    Just when the world thought Keanu Reeves had gracefully faded into cult legacy status — a respected but quiet star of the past — he returned in 2014 with a vengeance. <strong>John Wick</strong> was not just a movie; it was a rebirth. A revolution. A gun-blazing, neon-lit, emotionally driven return to the screen that no one saw coming, not even Keanu himself.
+  </p>
+
+  <p>
+    Directed by former stuntmen Chad Stahelski and David Leitch, <em>John Wick</em> was raw, stylized action elevated to balletic precision. It wasn’t just the choreography or the bullets — it was Keanu’s grief-stricken performance as a retired hitman mourning his wife and seeking vengeance for the killing of his puppy — the final gift from his deceased partner. The absurdity of the premise hid a core of searing emotional truth.
+  </p>
+
+  <p>
+    That puppy represented more than loss. It was everything Keanu had ever lost — Jennifer Syme, Ava, the years of silence. Wick was Keanu. A man who had suffered and had nothing left but his word and his wrath. He trained relentlessly for the role — Brazilian jiu-jitsu, judo, tactical gun drills. He wasn’t just playing Wick; he <em>became</em> him.
+  </p>
+
+  <p>
+    The film was a sleeper hit, grossing over $86 million worldwide. But more importantly, it reminded Hollywood — and the world — that Keanu was a force. He wasn’t done. Not even close.
+  </p>
+
+  <p>
+    Then came <strong>John Wick: Chapter 2</strong> in 2017 and <strong>Chapter 3 – Parabellum</strong> in 2019. Each installment expanded the mythos — the Continental Hotel, the High Table, the coins, the assassins’ underworld. Keanu performed 90% of his own stunts. His commitment to the craft, his humility with the cast and crew, and his unwavering dedication turned a simple revenge flick into one of the most iconic action franchises of the decade.
+  </p>
+
+  <p>
+    During this time, Keanu’s image underwent a renaissance online. Memes of “Sad Keanu” sitting alone on a bench became viral. But instead of mocking him, people connected with his realness — his introverted nature, his awkwardness, his refusal to conform to Hollywood’s flashiness. He rode the subway. He took time to chat with fans. He stayed after panels to help clean up. The world wasn’t just watching John Wick — they were rediscovering Keanu Reeves, the man.
+  </p>
+
+  <p>
+    In 2019, Keanu voiced the character “Duke Caboom” in <strong>Pixar’s Toy Story 4</strong>, bringing charm, humor, and a touch of Canadian flair to the beloved franchise. It showed another side of him — playful, funny, and self-aware. That same year, he also appeared in the romantic comedy <em>Always Be My Maybe</em> as an exaggerated version of himself. The scene-stealing cameo became instantly iconic, further fueling the “Keanussance.”
+  </p>
+
+  <p>
+    Then came E3 2019. As he took the stage to reveal his role in the video game <strong>Cyberpunk 2077</strong>, a fan in the audience shouted, “You’re breathtaking!” Keanu pointed back and said, “You’re breathtaking! You’re all breathtaking!” The moment went viral — a simple, unscripted gesture that once again reminded people of his unfiltered sincerity.
+  </p>
+
+  <p>
+    Keanu wasn’t trying to be cool — and that made him the coolest guy in the world. In an age of filtered personalities and curated lives, he was unapologetically himself. Authentic, thoughtful, and a little mysterious.
+  </p>
+
+  <p>
+    Away from the cameras, Keanu continued with his artistic passions. He co-founded <strong>Arch Motorcycle Company</strong>, a boutique brand creating custom performance motorcycles. He also published a series of books with artist Alexandra Grant through his publishing label X Artists’ Books, including “<em>Ode to Happiness</em>” — a meditation on fulfillment and peace.
+  </p>
+
+  <p>
+    As the 2010s ended, Keanu had transformed. He was no longer just a sci-fi legend or a tragic figure — he was a symbol of quiet strength, resilience, and rebirth. <em>John Wick</em> didn't just revive his career; it gave his fans a new hero to root for — one that felt real, flawed, and deeply human.
+  </p>
+
+  <p>
+    Whether it was action-packed shootouts or humble subway rides, Keanu Reeves reminded the world of the beauty in kindness, the power of redemption, and the fact that you can start over — even after everything falls apart.
+  </p>
+</div>
+
+
+
+
+<style>
+  body {
+    background: linear-gradient(to bottom, #121212, #1c1c1c);
+    font-family: 'Segoe UI', sans-serif;
+    color: #f0f0f0;
+
+  }
+
+  .keanu-bio-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.9;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #0d6efd;
+    text-shadow: 0 0 8px rgba(13, 110, 253, 0.5);
+    margin-top: 2rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="keanu-bio-section">
+  <h2> Legacy, The Matrix Resurrections & The Immortal Human (2021–Present)</h2>
+
+  <p>
+    As the world stepped into a new decade — one shaped by uncertainty, a pandemic, and a collective shift in consciousness — Keanu Reeves returned once again to the role that made him a philosophical icon: Neo. In <strong>The Matrix Resurrections</strong> (2021), Reeves reunited with director Lana Wachowski to re-enter the simulated world that had captivated millions since 1999.
+  </p>
+
+  <p>
+    The fourth installment of The Matrix wasn’t just a sequel. It was a reflection. A self-aware, meta-infused film that asked audiences not just to question reality, but to examine nostalgia, love, and the very purpose of storytelling itself. With long hair and a quiet solemnity, Reeves portrayed a Neo who had aged, mourned, forgotten, and remembered — mirroring the actor’s own life.
+  </p>
+
+  <p>
+    While the film received mixed reviews, Reeves’ performance was praised for its depth and emotional clarity. Neo was no longer a one-dimensional savior; he was a man still searching. Still choosing. Still human. In many ways, <em>Resurrections</em> wasn’t about saving the world — it was about saving the soul.
+  </p>
+
+  <p>
+    During press tours and interviews, Keanu continued to enchant audiences with his warmth, humility, and philosophical insight. He once remarked, “I know that the ones who love us will miss us,” when asked about death. These moments — simple and sincere — carried more weight than entire monologues. In a noisy world, Keanu’s quiet truth spoke volumes.
+  </p>
+
+  <p>
+    He also reprised his role as John Wick in <strong>John Wick: Chapter 4</strong> (2023), the most emotionally resonant and physically intense entry in the franchise. The film pushed boundaries of choreography, location, and loss — and Keanu, despite being nearly 60, performed with staggering dedication. The world watched in awe as he rolled down stairs in Paris, rode horses through Casablanca, and once again turned vengeance into poetry.
+  </p>
+
+  <p>
+    By now, Keanu Reeves had become more than a movie star. He was a <strong>symbol</strong>. Of perseverance, of grace under pressure, of choosing kindness in a cynical world. Fans flooded forums with stories of his generosity — buying an ice cream just to sign a receipt for a fan, giving his seat on the subway to a stranger, gifting Harley-Davidsons to his stunt team.
+  </p>
+
+  <p>
+    In 2022, he voiced Batman in <strong>DC League of Super-Pets</strong>, bringing gravitas and humor to an animated role that delighted both children and adults. He was also cast in major upcoming projects, including <strong>Ballerina</strong> — a spin-off in the John Wick universe — and a return to comedic form in <strong>Good Fortune</strong>.
+  </p>
+
+  <p>
+    Yet, beyond the credits and the headlines, Keanu continued his journey inward. He partnered again with artist Alexandra Grant, and their collaboration blurred the line between romance, art, and deep creative respect. In interviews, he described her as someone who “creates beauty and thought” — and it became evident that their connection was based on something deeper than the surface.
+  </p>
+
+  <p>
+    Online, fans jokingly referred to him as “the immortal Keanu Reeves,” sharing old photographs of men from centuries past who resembled him. But beneath the memes was a profound truth — Keanu had transcended time in another way. His image, his roles, and his spirit had woven themselves into culture, like myths passed down through generations.
+  </p>
+
+  <p>
+    In his personal time, he still rode motorcycles, still played bass guitar, still read literature, and still preferred quiet to chaos. When asked if he believed in fate, he replied, “I believe in cause and effect,” a Zen-like answer that said more in six words than most could in a monologue.
+  </p>
+
+  <p>
+    He once said: “Art is about trying to find the good in people and making the world a more compassionate place.” And that has been the heartbeat of his legacy. Not the fame. Not the action scenes. But the compassion.
+  </p>
+
+  <p>
+    As the years pass, Keanu Reeves remains a lighthouse for millions — not because he shines the brightest, but because he never tries to outshine anyone. He is the calm in the storm, the soul in the spectacle, the man behind the myth. And perhaps that’s his greatest role yet.
+  </p>
+</div>
+
+
+
+<style>
+  body {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    font-family: 'Segoe UI', sans-serif;
+    color: #f8f9fa;
+
+  }
+
+  .keanu-final-reflections {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    line-height: 1.9;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #ff3c00;
+    text-shadow: 0 0 10px rgba(255, 60, 0, 0.5);
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+
+  .quote {
+    font-style: italic;
+    color: #ccc;
+    border-left: 4px solid #ff3c00;
+    padding-left: 1rem;
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.6rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<div class="keanu-final-reflections">
+  <h2> Closing Reflections — The Philosophy of Keanu Reeves</h2>
+
+  <p>
+    Keanu Reeves is not just a man — he is an idea. A quiet revolution in a world that often rewards noise. A figure of peace in a chaotic industry. A living reminder that humility and success are not opposites, but companions.
+  </p>
+
+  <p>
+    His legacy is not confined to the silver screen. It stretches far beyond franchises and fame. It is seen in the people he inspires, the kindness he extends, and the silence he embraces — a silence that speaks louder than applause.
+  </p>
+
+  <p>
+    Fans often say Keanu “restores their faith in humanity.” It’s a phrase repeated like a mantra, and yet, each time it’s spoken, it feels newly true. He has become a mirror for many — reflecting the better parts of ourselves, reminding us that kindness can be cool, that empathy is not weakness, and that integrity is not outdated.
+  </p>
+
+  <div class="quote">
+    "If you have been brutally broken but still have the courage to be gentle to other living beings, then you’re a badass with a heart of an angel." — Keanu Reeves
   </div>
+
+  <p>
+    These words don’t just belong on posters — they belong in the way we live. Keanu embodies them. Whether on the subway or the red carpet, with fans or fellow actors, he moves through the world with a grace that feels rare, and a soul that feels familiar.
+  </p>
+
+  <p>
+    He has taught us that being present is more powerful than being perfect. That mourning is not something to hide. That love can endure loss. That grief can coexist with laughter. And that sometimes the strongest people are the ones who ask the fewest questions and listen the most.
+  </p>
+
+  <p>
+    In Hollywood, where reinvention is currency, Keanu has stayed grounded — never becoming something he’s not, but always evolving. From *The Matrix* to *John Wick*, from *River's Edge* to *Constantine*, each role was another facet of a deep and mysterious human being who never demanded attention, but earned respect.
+  </p>
+
+  <p>
+    He has become a sort of spiritual compass in popular culture. Whether through quotes, gestures, or just existing authentically, Keanu Reeves teaches us not just how to act, but how to be. To listen more. To give when we can. To be excellent to each other.
+  </p>
+
+  <p>
+    And perhaps that is what makes Keanu timeless. He reminds us that behind every actor is a person, and behind every person, a story. A story of love and pain. Triumph and failure. Movement and stillness. He is not trying to be our hero — and yet, in not trying, he becomes one.
+  </p>
+
+  <div class="quote">
+    "I don't want to be part of a world where being kind is a weakness." — Keanu Reeves
+  </div>
+
+  <p>
+    As we close this journey through his life, career, and philosophy, one truth remains: Keanu Reeves is more than just a movie star — he is a symbol of enduring decency in a world that too often forgets its soul.
+  </p>
+
+  <p>
+    Whether you're a long-time admirer or just discovering him, one thing is clear: there is no one else like Keanu. His story continues — on screen, on the road, and in the quiet hearts of those who see in him not just a performer, but a profound and human being.
+  </p>
+
+  <p>
+    And so, as he always says — and as we now say back — “Be excellent to each other.”
+  </p>
+</div>
+
+
 {% endblock %}

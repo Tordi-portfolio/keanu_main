@@ -6,17 +6,17 @@
   body {
     background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
     font-family: 'Segoe UI', sans-serif;
+    color: #fff;
   }
 
   .donation-hero {
     padding: 100px 20px 60px;
     text-align: center;
-    color: #fff;
     background: radial-gradient(circle at top, rgba(255, 60, 0, 0.2), transparent);
   }
 
   .donation-hero h1 {
-    font-size: 48px;
+    font-size: 52px;
     font-weight: bold;
     color: #ff3c00;
     text-shadow: 0 0 12px rgba(255, 60, 0, 0.6);
@@ -24,25 +24,24 @@
   }
 
   .donation-hero p {
-    font-size: 18px;
-    max-width: 720px;
+    font-size: 20px;
+    max-width: 850px;
     margin: 0 auto;
     color: #ccc;
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   .section {
-    padding: 60px 20px;
+    padding: 70px 20px;
     max-width: 1200px;
     margin: auto;
-    color: #eee;
   }
 
   .section h2 {
-    font-size: 32px;
+    font-size: 36px;
     color: #ff3c00;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
     text-shadow: 0 0 8px rgba(255, 60, 0, 0.4);
   }
 
@@ -64,8 +63,10 @@
   .image-row p {
     flex: 1;
     min-width: 280px;
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #ddd;
+    text-align: justify;
   }
 
   .tiers {
@@ -82,7 +83,6 @@
     backdrop-filter: blur(10px);
     padding: 25px;
     border-radius: 14px;
-    color: #fff;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 60, 0, 0.1);
   }
@@ -93,14 +93,14 @@
   }
 
   .tier-card h3 {
-    font-size: 22px;
+    font-size: 24px;
     color: #ff3c00;
     margin-bottom: 10px;
   }
 
   .tier-card p {
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 16px;
+    color: #ccc;
   }
 
   .timeline {
@@ -110,70 +110,55 @@
   }
 
   .timeline-entry {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
   }
 
   .timeline-entry h4 {
     margin-bottom: 8px;
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .timeline-entry small {
-    color: #ccc;
-    font-size: 14px;
+    color: #aaa;
+    font-size: 15px;
   }
 
   .donate-cta {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 60px;
   }
 
   .donate-btn {
     display: inline-block;
     background: #ff3c00;
     color: #fff;
-    padding: 14px 28px;
+    padding: 16px 34px;
     font-weight: bold;
     border-radius: 50px;
-    box-shadow: 0 0 12px rgba(255, 60, 0, 0.4);
+    font-size: 17px;
     text-decoration: none;
-    font-size: 16px;
+    margin: 10px;
+    box-shadow: 0 0 12px rgba(255, 60, 0, 0.4);
     transition: all 0.3s ease;
   }
 
   .donate-btn:hover {
     background: #e03600;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(255, 60, 0, 0.6);
-  }
-
-  .testimonials {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .testimonial {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 20px;
-    border-left: 4px solid #54a0ff;
-    border-radius: 12px;
-    font-style: italic;
-    color: #ddd;
   }
 
   .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
   }
 
   .stat-box {
     background: rgba(255, 255, 255, 0.04);
-    padding: 20px;
+    padding: 25px;
     border-radius: 14px;
     text-align: center;
     border: 1px solid rgba(255,255,255,0.08);
@@ -181,12 +166,12 @@
   }
 
   .stat-box h3 {
-    font-size: 36px;
+    font-size: 40px;
     color: #ff3c00;
   }
 
   .stat-box p {
-    font-size: 16px;
+    font-size: 17px;
     color: #ccc;
   }
 
@@ -196,9 +181,9 @@
 
   .faq-item {
     background: rgba(255, 255, 255, 0.03);
-    padding: 20px;
+    padding: 25px;
     border-radius: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .faq-item h4 {
@@ -207,112 +192,105 @@
   }
 
   .faq-item p {
-    font-size: 15px;
+    font-size: 16px;
     color: #ccc;
   }
 
   @media (max-width: 768px) {
     .donation-hero h1 {
-      font-size: 34px;
+      font-size: 36px;
     }
+
     .section h2 {
       font-size: 28px;
+    }
+
+    .image-row {
+      flex-direction: column;
     }
   }
 </style>
 
 <div class="donation-hero">
-  <h1>Support Jason Momoa’s Global Missions</h1>
-  <p>Jason Momoa isn’t just an actor — he’s a humanitarian. Your donation powers his efforts to bring clean water, protect sacred lands, and heal children’s hearts worldwide.</p>
+  <h1>Support Keanu Reeves’ Global Humanitarian Efforts</h1>
+  <p>
+    Keanu Reeves is known not only for his roles on screen, but for the quiet impact he has made off camera. Through years of anonymous giving, cancer research support, children’s hospital funding, and disaster relief, Keanu has quietly built a legacy of compassion. Your donation helps continue that mission — to heal, uplift, and protect the people and places that matter most.
+  </p>
 </div>
 
 <div class="section">
-  <h2>Where Your Help Goes</h2>
+  <h2>A Legacy of Compassion</h2>
   <div class="image-row">
     <div>
-      <img src="{% static 'image/jason-ophange.jpeg' %}" alt="Jason Giving">
+      <img src="{% static 'image/keanu-kindness.jpeg' %}" alt="Keanu Kindness Moment">
     </div>
     <p>
-      From the Pacific islands to the Amazon rainforest, Jason has personally led humanitarian aid efforts. Through his organization, the 222 Foundation, he has donated thousands of gallons of clean water, funded children's cancer treatments, and planted thousands of trees to fight deforestation.
+      While Hollywood sees a star, we see a soul — a man who has donated millions to cancer research in honor of his sister, supported children's hospitals without seeking praise, and walked miles just to make sure his fans felt seen. Keanu’s work has touched lives quietly, but profoundly. Now, with your help, we expand that impact.
     </p>
   </div>
-  <div class="image-row" style="margin-top: 30px;">
-    <img src="{% static 'image/jason-ophange-2.jpeg' %}" alt="Jason Momoa Water Africa">
-    <img src="{% static 'image/jason-ophange-3.jpeg' %}" alt="Jason with Helping Hands">
-  </div>
 </div>
 
 <div class="section">
-  <h2>Milestones & Timeline</h2>
+  <h2>Milestones That Matter</h2>
   <div class="timeline">
     <div class="timeline-entry">
-      <h4>2021 – Water for Navajo Nation</h4>
-      <small>USA</small>
-      <p>Partnered with local tribes to deliver water tanks to drought-stricken areas.</p>
+      <h4>2020 – COVID Frontline Support</h4>
+      <small>Global</small>
+      <p>Partnered with relief groups to provide PPE, food packs, and morale support to hospital workers during the height of the pandemic.</p>
     </div>
     <div class="timeline-entry">
-      <h4>2022 – Amazon Reforestation Mission</h4>
-      <small>Brazil</small>
-      <p>Funded the planting of 10,000 trees and visited Indigenous tribes for cultural exchange.</p>
+      <h4>2021 – Pediatric Cancer Initiative</h4>
+      <small>USA & Canada</small>
+      <p>Funded new research and donated to children’s oncology hospitals anonymously. Dozens of treatments were made possible through his support.</p>
     </div>
     <div class="timeline-entry">
-      <h4>2023 – Ocean Cleanups with Sustainable Coastlines</h4>
-      <small>Hawaii & Fiji</small>
-      <p>Led ocean cleanup campaigns and educational talks in over 15 coastal schools.</p>
+      <h4>2022 – Homeless Outreach and Mental Wellness</h4>
+      <small>California</small>
+      <p>Led efforts to provide hot meals, hygiene kits, and trauma counseling to people living on the streets of Los Angeles.</p>
     </div>
-  </div>
-
-  <div class="image-row" style="margin-top: 30px;">
-    <img src="{% static 'image/jason-ophange-4.jpeg' %}" alt="Ocean Cleanup">
-    <img src="{% static 'image/jason-ophange-5.jpeg' %}" alt="Jason in Hawaii with Kids">
   </div>
 </div>
 
 <div class="section">
-  <h2>Donation Tiers</h2>
+  <h2>Donation Tiers — Fuel the Mission</h2>
   <div class="tiers">
     <div class="tier-card">
-      <h3>$25 — Spark a Wish</h3>
-      <p>Provide a child with a care package or hospital activity kit.</p>
+      <h3>$25 – A Moment of Light</h3>
+      <p>Help send books, art kits, and comfort items to young cancer patients.</p>
     </div>
     <div class="tier-card">
-      <h3>$50 — Clean Ocean Kit</h3>
-      <p>Supply gloves, bags, and gear for beach cleanups.</p>
+      <h3>$50 – A Hot Meal, A Safe Night</h3>
+      <p>Provide food and emergency shelter to someone in crisis.</p>
     </div>
     <div class="tier-card">
-      <h3>$100 — Wildlife Rescue Aid</h3>
-      <p>Feed and care for rescued animals from fire zones.</p>
+      <h3>$100 – Hope and Healing</h3>
+      <p>Support trauma therapy and mental health access for youth and survivors.</p>
     </div>
     <div class="tier-card">
-      <h3>$250 — Tribal Empowerment</h3>
-      <p>Support land rights and healthcare for Native communities.</p>
+      <h3>$250 – The Next Chapter</h3>
+      <p>Fund scholarships, mentorships, and programs that help individuals rise from hardship into strength.</p>
     </div>
-  </div>
-
-  <div class="image-row" style="margin-top: 40px;">
-    <img src="{% static 'image/jason-ophange-6.jpeg' %}" alt="Tree Planting Campaign">
-    <img src="{% static 'image/jason-ophange-7.jpeg' %}" alt="Earth Day Event with Jason Momoa">
   </div>
 </div>
 
 <div class="section">
-  <h2>Impact in Numbers</h2>
+  <h2>Impact By the Numbers</h2>
   <div class="stats-grid">
     <div class="stat-box">
-      <h3>18+</h3>
-      <p>Countries Reached</p>
+      <h3>20+</h3>
+      <p>Projects Funded</p>
     </div>
     <div class="stat-box">
-      <h3>7.5K+</h3>
-      <p>Trees Planted</p>
+      <h3>5K+</h3>
+      <p>Meals Provided</p>
     </div>
     <div class="stat-box">
-      <h3>500K+</h3>
-      <p>Plastic Items Removed</p>
+      <h3>3M+</h3>
+      <p>Dollars Quietly Donated</p>
     </div>
     <div class="stat-box">
-      <h3>1.2M</h3>
-      <p>Gallons of Water Donated</p>
+      <h3>Thousands</h3>
+      <p>Of Lives Touched</p>
     </div>
   </div>
 </div>
@@ -320,23 +298,26 @@
 <div class="section faq">
   <h2>Frequently Asked Questions</h2>
   <div class="faq-item">
-    <h4>Is this donation tax deductible?</h4>
-    <p>Yes, donations to Jason Momoa’s 222 Foundation are fully tax deductible in most countries.</p>
+    <h4>Is this donation public?</h4>
+    <p>Only if you choose. You may donate anonymously or with a name and note of your choosing.</p>
   </div>
   <div class="faq-item">
-    <h4>Can I choose where my money goes?</h4>
-    <p>Yes! You can specify the project in your message field when donating.</p>
+    <h4>Is this connected directly to Keanu?</h4>
+    <p>All funds support the verified outreach initiatives that Keanu personally supports or funds. 100% transparency, no overhead cuts.</p>
   </div>
   <div class="faq-item">
-    <h4>Can I donate anonymously?</h4>
-    <p>Absolutely. Just check the anonymous option at checkout or leave your name field blank.</p>
+    <h4>Can I donate regularly?</h4>
+    <p>Yes! You can choose to give monthly and be part of the “Everkind Circle” — supporters dedicated to ongoing change.</p>
   </div>
 </div>
 
 <div class="section donate-cta">
-  <h2>Be the Flame. Be the Change.</h2>
-  <p>Your generosity ignites global impact. Stand beside Jason and empower love, nature, and justice.</p>
+  <h2>Be Kind. Be Brave. Be a Light.</h2>
+  <p>
+    If Keanu’s story has ever inspired you, now is your chance to walk beside him — not on the red carpet, but on the road that changes lives. Let your kindness echo.
+  </p>
   <a href="{% url 'donate_payment' %}" class="donate-btn">Make a Donation</a>
-  <a href="{% url 'donate' %}" class="donate-btn">Fill A Donation Form</a>
+  <a href="{% url 'donate' %}" class="donate-btn">Fill a Donation Form</a>
 </div>
+
 {% endblock %}

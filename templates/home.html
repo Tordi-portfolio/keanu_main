@@ -1,115 +1,196 @@
 {% extends 'base2.html' %}
 
 {% block content %}
-  <style>
-    body {
-      background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
-      color: #e8e8e8;
+<style>
+  :root {
+    --accent-color: #ff3c00;
+  }
+
+  body {
+    background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
+    color: #e8e8e8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .keanu-welcome-page {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .keanu-welcome-page .container {
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.2);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1.5s ease-in-out;
+    text-align: left;
+  }
+
+  .keanu-welcome-page h1 {
+    color: var(--accent-color);
+    font-size: 3rem;
+    margin-bottom: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(255, 60, 0, 0.6);
+  }
+
+  .keanu-welcome-page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    text-align: center;
+  }
+
+  .keanu-welcome-page p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #ddd;
+    text-align: justify;
+  }
+
+  .keanu-welcome-page .signature {
+    margin-top: 35px;
+    font-style: italic;
+    color: #bbb;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .keanu-welcome-page .btn {
+    margin-top: 35px;
+    display: inline-block;
+    padding: 15px 35px;
+    background: var(--accent-color);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 35px;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(255, 60, 0, 0.4);
+  }
+
+  .keanu-welcome-page .btn:hover {
+    background: #e04100;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 60, 0, 0.6);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .keanu-welcome-page .container {
+      padding: 20px 15px;
     }
 
-    .intro-section {
-      animation: fadeIn 1.5s ease-in-out;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.03);
-      border-radius: 20px;
-      box-shadow: 0 0 30px rgba(255, 60, 0, 0.2);
-      backdrop-filter: blur(6px);
+    .keanu-welcome-page h1 {
+      font-size: 2.2rem;
     }
 
-    .intro-title {
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      text-align: center;
-      text-shadow: 2px 2px 8px rgba(255, 60, 0, 0.6);
-      margin-bottom: 1.5rem;
-    }
-
-    .intro-text {
+    .keanu-welcome-page h2 {
       font-size: 1.2rem;
-      line-height: 1.8;
-      color: #ddd;
-      text-align: justify;
     }
 
-    .intro-text span {
-      color: var(--accent-color);
-      font-weight: 600;
-    }
-
-    .quote {
-      margin-top: 2rem;
-      padding: 1rem 1.5rem;
-      border-left: 4px solid var(--accent-color);
-      background: rgba(255, 255, 255, 0.02);
-      font-style: italic;
-      font-size: 1.1rem;
-      color: #bbb;
-      box-shadow: inset 0 0 10px rgba(255, 60, 0, 0.1);
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.8rem 1.8rem;
-      background: var(--accent-color);
-      color: #fff;
-      font-weight: bold;
+    .keanu-welcome-page p {
       font-size: 1rem;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(255, 60, 0, 0.4);
-      transition: 0.3s ease;
     }
+  }
+</style>
 
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 60, 0, 0.6);
-    }
+<div class="keanu-welcome-page">
+  <div class="container">
+    <h1>Welcome…</h1>
+    <h2>I'm Keanu Reeves, and I'm grateful you're here.</h2>
 
-    @media (max-width: 768px) {
-      .intro-title {
-        font-size: 2rem;
-      }
+    <p>
+      Life has this funny way of moving — sometimes fast, sometimes painfully slow...
+    </p>
 
-      .intro-text {
-        font-size: 1rem;
-      }
+    <p>
+      I created this space — my official website — not to promote, not to sell, not to convince, but to connect...
+    </p>
 
-      .quote {
-        font-size: 1rem;
-      }
-    }
+    <p>
+      You might know me from films like <em>The Matrix</em>, where we explored the idea that reality may not be what it seems...
+    </p>
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+    <p>
+      This website is a small attempt to peel back that curtain...
+    </p>
 
-  <div class="intro-section">
-    <div class="intro-title">Hey, I'm Jason Momoa</div>
+    <p>
+      When I was young, I found comfort in stories...
+    </p>
 
-    <div class="intro-text">
-      Acting is only a part of what I do—my real love is <span>storytelling</span>. I pour my energy into characters that make people feel something real. Whether I'm a tribal warlord, a lost father, or the protector of the ocean, I'm chasing truth and depth in every performance.
-      <br><br>
-      But it doesn't stop with acting. I'm also a <span>director, writer, and producer</span>. I love building stories from the ground up—being behind the camera is just as thrilling as being in front of it. There’s nothing like crafting a world and watching it come alive.
-      <br><br>
-      I find peace in the <span>wild</span>. I’m addicted to climbing, motorcycles, the ocean, and anything that brings me close to nature. I’m deeply passionate about <span>protecting the planet</span>—from clean water access to sustainable living, I use my voice for what matters most.
-      <br><br>
-      I live with passion, I create with fire, and I try to stay grounded in the things that keep me human. I’m not trying to be perfect. I’m just trying to be <span>real</span>.
+    <p>
+      I've traveled the world — sometimes physically, sometimes through the written word...
+    </p>
+
+    <p>
+      People often ask what drives me — what keeps me grounded...
+    </p>
+
+    <p>
+      Here, I want to open a dialogue...
+    </p>
+
+    <p>
+      You’ll find reflections about my motorcycle company, Arch Motorcycles...
+    </p>
+
+    <p>
+      You don’t have to be famous to live an extraordinary life...
+    </p>
+
+    <p>
+      This space is not perfect. It’s evolving, like me, like you...
+    </p>
+
+    <p>
+      Over the years, I’ve been called many things — actor, artist, musician, even "mysterious"...
+    </p>
+
+    <p>
+      To those of you who’ve supported my work — thank you. To those discovering me for the first time — welcome...
+    </p>
+
+    <p>
+      So whether you’re here for a glimpse behind the scenes, a reflection on life’s mysteries...
+    </p>
+
+    <p>
+      Life moves fast, but we don’t always have to...
+    </p>
+
+    <p>
+      You’re not alone. Your story matters...
+    </p>
+
+    <p>
+      So take your time exploring this space...
+    </p>
+
+    <p class="signature">With sincerity,<br>— Keanu Reeves</p>
+
+    <div style="text-align: center;">
+      <a href="/" class="btn">The Official Keanu Reeves Site</a>
     </div>
-
-    <div class="quote">
-      “Everything I do is rooted in passion—whether it's fighting for the planet, crafting a story, or simply being a dad. I live with heart and I don't hold back.”<br>— Jason Momoa
-    </div>
-
-    <a href="#" class="cta-button">Explore My Work</a>
   </div>
+</div>
+
 {% endblock %}
