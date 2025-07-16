@@ -181,3 +181,8 @@ from .models import PrivateChat  # Import your model
 def get_unread_count(request):
     count = PrivateChat.objects.filter(recipient=request.user, is_read=False).count()
     return JsonResponse({'unread_count': count})
+
+
+
+def moodley(request):
+    return render(request, 'fans/moodley.html')

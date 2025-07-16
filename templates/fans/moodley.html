@@ -1,0 +1,123 @@
+{% extends 'base3.html' %}
+{% load static %}
+
+{% block content %}
+<div class="krishnie-body">
+
+  <style>
+    .krishnie-body {
+      background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 60px 20px;
+    }
+
+    .krishnie-body .tribute-container {
+      background: rgba(255, 255, 255, 0.04);
+      max-width: 900px;
+      margin: auto;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 140, 0, 0.2);
+    }
+
+    .krishnie-body h1 {
+      text-align: center;
+      font-size: 38px;
+      color: #ffa500;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
+    }
+
+    .krishnie-body p {
+      font-size: 16.5px;
+      line-height: 1.8;
+      margin-bottom: 25px;
+      color: #ddd;
+    }
+
+    .krishnie-body .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+
+    .krishnie-body .image-gallery img {
+      max-width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 0 15px rgba(255, 140, 0, 0.15);
+      width: 100%;
+      max-width: 280px;
+      object-fit: cover;
+    }
+
+    .krishnie-body .support-box {
+      background: rgba(255, 255, 255, 0.03);
+      border-left: 6px solid #ff6f00;
+      padding: 25px;
+      margin-top: 40px;
+      border-radius: 12px;
+    }
+
+    .krishnie-body .support-box h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #ff9900;
+    }
+
+    .krishnie-body .support-box p {
+      color: #ccc;
+    }
+  </style>
+
+  <div class="tribute-container">
+    <h1>A Tribute to Krishnie Moodley</h1>
+
+    <p>
+      In a world often clouded by chaos and uncertainty, there are still beacons of warmth, compassion, and unwavering strength. One such beacon is <strong>Krishnie Moodley</strong>. Her heart, her voice, her resilience — they leave a mark on everyone who’s ever crossed her path.
+    </p>
+
+    <p>
+      Krishnie embodies the essence of loyalty. Through the seasons of life, she has remained constant — to her family, her friends, and even to strangers who’ve come to know her story. Her words have a way of uplifting even the most broken spirits. Her smile, though quiet, carries volumes of encouragement and calm. She listens without judgment, speaks with kindness, and gives with no expectation of return.
+    </p>
+
+    <p>
+      She is a loving wife, a devoted grandmother, and a soul who pours herself into every relationship she holds dear. Even when life grew difficult, Krishnie never stepped away. She stood taller, held tighter, and gave more. Her husband, who now endures a painful and trying illness, is a powerful testimony of her love. She has remained by his side — nurturing, feeding, lifting his spirits, and ensuring he is treated with care and dignity.
+    </p>
+
+    <div class="image-gallery">
+      <img src="{% static 'image/moodley1.jpg' %}" alt="Krishnie Moodley">
+      <img src="{% static 'image/moodley2.jpg' %}" alt="Krishnie with Grandchild">
+      <img src="{% static 'image/moodley3.jpg' %}" alt="Krishnie's Husband">
+    </div>
+
+    <p>
+      Each day is a quiet battle for Krishnie, but one she fights with love. Her husband’s illness has taken a toll emotionally, physically, and financially. The medications are costly, the routines are demanding, and the nights are long. Yet Krishnie never complains. Instead, she channels her energy into being a steady presence — ensuring he feels peace, comfort, and love. That is the power of a heart like hers.
+    </p>
+
+    <p>
+      Her grandchildren adore her, drawn to the gentle strength she carries. She’s never too tired to play, too busy to listen, or too hurt to laugh. They find safety in her arms and wisdom in her words. Her home is one of unconditional acceptance, laughter in the face of sorrow, and hope on the darkest days.
+    </p>
+
+    <p>
+      To know Krishnie Moodley is to understand the true definition of grace under pressure. She does not need applause, but she deserves all the praise in the world. Her selflessness is not performative; it is rooted in sincerity. Her faithfulness to those she loves is deeply inspiring.
+    </p>
+
+    <div class="support-box">
+      <h2>How You Can Help</h2>
+      <p>
+        As her husband’s medical needs increase, so does the strain on her resources. If you feel moved by Krishnie’s story and would like to support her family in any way — whether it be through prayers, financial assistance for his medications, or simply kind words — she would receive it with a heart full of gratitude.
+      </p>
+    </div>
+
+    <p>
+      Thank you, Krishnie, for being the quiet light in so many lives. Your compassion heals, your strength inspires, and your loyalty uplifts. You are seen, appreciated, and deeply loved.
+    </p>
+
+  </div>
+</div>
+{% endblock %}

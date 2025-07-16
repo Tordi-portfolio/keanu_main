@@ -1,15 +1,21 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Keanu Reeves</title>
- 
+
   <style>
-    /* NAV & FOOTER */
-    nav.navbar {
+    body.base2-body {
+      background-color: #000;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .base2-navbar {
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(10px);
       padding: 15px 30px;
@@ -21,14 +27,14 @@
       position: relative;
     }
 
-    nav.navbar .logo {
+    .base2-navbar .logo {
       font-size: 1.6rem;
       font-weight: bold;
       color: #fff;
       text-shadow: 0 0 8px rgba(255, 60, 0, 0.5);
     }
 
-    .menu-toggle {
+    .base2-menu-toggle {
       display: none;
       font-size: 26px;
       color: #fff;
@@ -37,13 +43,13 @@
       cursor: pointer;
     }
 
-    nav.navbar ul.nav-links {
+    .base2-nav-links {
       list-style: none;
       display: flex;
       gap: 20px;
     }
 
-    nav.navbar ul.nav-links li a {
+    .base2-nav-links li a {
       text-decoration: none;
       color: #eee;
       font-weight: 500;
@@ -52,12 +58,12 @@
       position: relative;
     }
 
-    nav.navbar ul.nav-links li a:hover,
-    nav.navbar ul.nav-links li a.active {
+    .base2-nav-links li a:hover,
+    .base2-nav-links li a.active {
       color: #ff3c00;
     }
 
-    nav.navbar ul.nav-links li a.active::after {
+    .base2-nav-links li a.active::after {
       content: '';
       position: absolute;
       width: 100%;
@@ -67,7 +73,7 @@
       left: 0;
     }
 
-    footer {
+    .base2-footer {
       background: rgba(255, 255, 255, 0.03);
       padding: 40px 30px;
       color: #eee;
@@ -76,14 +82,14 @@
       margin-top: 50px;
     }
 
-    .footer-section h4 {
+    .base2-footer-section h4 {
       color: #ff3c00;
       margin-bottom: 12px;
       font-size: 18px;
       text-shadow: 0 0 6px rgba(255, 60, 0, 0.4);
     }
 
-    .footer-section a {
+    .base2-footer-section a {
       display: block;
       color: #ccc;
       text-decoration: none;
@@ -92,9 +98,9 @@
       transition: color 0.3s ease;
     }
 
-    .footer-section a:hover { color: #ff3c00; }
+    .base2-footer-section a:hover { color: #ff3c00; }
 
-    .footer-bottom {
+    .base2-footer-bottom {
       text-align: center;
       font-size: 13px;
       margin-top: 20px;
@@ -103,60 +109,36 @@
       color: #999;
     }
 
-    @media (min-width: 768px) {
-      footer {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        padding: 50px 60px;
-      }
-
-      .footer-section {
-        flex: 1;
-        padding: 0 20px;
-        max-width: 33.3%;
-      }
-
-      .footer-bottom {
-        flex-basis: 100%;
-        margin-top: 40px;
-        font-size: 14px;
-      }
-    }
-
     @media (max-width: 768px) {
-      .menu-toggle {
+      .base2-menu-toggle {
         display: block;
         position: absolute;
         right: 20px;
         top: 18px;
       }
 
-      nav.navbar {
+      .base2-navbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 15px;
       }
 
-      nav.navbar ul.nav-links {
+      .base2-nav-links {
         flex-direction: column;
         width: 100%;
         margin-top: 10px;
         display: none;
       }
 
-      nav.navbar ul.nav-links.show {
-        display: flex;
-      }
+      .base2-nav-links.show { display: flex; }
 
-      nav.navbar ul.nav-links li a {
+      .base2-nav-links li a {
         display: block;
         padding: 8px 0;
       }
     }
 
-    /* TOAST STYLES */
-    .toast-wrapper {
+    .base2-toast-wrapper {
       position: fixed;
       top: 20px;
       right: 20px;
@@ -166,7 +148,7 @@
       gap: 15px;
     }
 
-    .toast {
+    .base2-toast {
       display: flex;
       align-items: center;
       padding: 15px 20px;
@@ -182,12 +164,12 @@
       position: relative;
     }
 
-    .toast-icon {
+    .base2-toast-icon {
       margin-right: 12px;
       font-size: 20px;
     }
 
-    .toast-close {
+    .base2-toast-close {
       position: absolute;
       top: 10px;
       right: 15px;
@@ -197,18 +179,18 @@
       transition: color 0.3s ease;
     }
 
-    .toast-close:hover { color: #fff; }
+    .base2-toast-close:hover { color: #fff; }
 
-    .toast.success { border-left: 5px solid #1dd1a1; }
-    .toast.error, .toast.danger { border-left: 5px solid #ee5253; }
-    .toast.info { border-left: 5px solid #54a0ff; }
+    .base2-toast.success { border-left: 5px solid #1dd1a1; }
+    .base2-toast.error, .base2-toast.danger { border-left: 5px solid #ee5253; }
+    .base2-toast.info { border-left: 5px solid #54a0ff; }
 
     @keyframes slideIn {
       from { opacity: 0; transform: translateX(40px); }
       to { opacity: 1; transform: translateX(0); }
     }
 
-    .notif-badge {
+    .base2-notif-badge {
       background: red;
       color: #fff;
       font-size: 0.7rem;
@@ -230,12 +212,13 @@
     }
   </style>
 </head>
-<body>
 
-<nav class="navbar">
+<body class="base2-body">
+
+<nav class="base2-navbar">
   <div class="logo">⚡ Keanu Reeves</div>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-  <ul class="nav-links" id="navLinks">
+  <button class="base2-menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('show')">☰</button>
+  <ul class="base2-nav-links" id="navLinks">
     <li><a href="{% url 'home' %}">Home</a></li>
     <li><a href="{% url 'author' %}">Author</a></li>
     <li><a href="{% url 'gallary' %}">Movies</a></li>
@@ -247,7 +230,7 @@
       <li><a href="{% url 'track_shipment' %}">Track Shipment</a></li>
       <li>
         <a href="{% url 'chat_with_admin' %}">
-          Chat with Jason <span class="notif-badge" id="chatBadge"></span>
+          Chat with Jason <span class="base2-notif-badge" id="chatBadge"></span>
         </a>
       </li>
       <li><a href="{% url 'logout' %}">Logout ({{ user.username }})</a></li>
@@ -259,7 +242,7 @@
       <li><p style="margin: 10px 0; color: #ff3c00;">Admins Only</p></li>
       <li>
         <a href="{% url 'admin_user_list' %}" class="chat-link">
-          User Chats <span class="notif-badge" id="adminBadge"></span>
+          User Chats <span class="base2-notif-badge" id="adminBadge"></span>
         </a>
       </li>
       <li><a href="{% url 'admin_upload_fanscard' %}">Upload User Card</a></li>
@@ -271,51 +254,42 @@
 </nav>
 
 {% if messages %}
-<div class="toast-wrapper">
+<div class="base2-toast-wrapper">
   {% for message in messages %}
-    <div class="toast {{ message.tags }}">
-      <span class="toast-icon">
+    <div class="base2-toast {{ message.tags }}">
+      <span class="base2-toast-icon">
         {% if message.tags == 'success' %} ✅
         {% elif message.tags == 'error' or message.tags == 'danger' %} ❌
         {% elif message.tags == 'info' %} ℹ️
         {% else %} ⚠️ {% endif %}
       </span>
-      <span class="toast-text">{{ message }}</span>
-      <span class="toast-close" onclick="this.parentElement.remove()">✖</span>
+      <span class="base2-toast-text">{{ message }}</span>
+      <span class="base2-toast-close" onclick="this.parentElement.remove()">✖</span>
     </div>
   {% endfor %}
 </div>
 {% endif %}
 
-{% block content %} {% endblock %}
+{% block content %}{% endblock %}
 
-<footer>
-  <div class="footer-section">
+<footer class="base2-footer">
+  <div class="base2-footer-section">
     <h4>About Keanu Reeves</h4>
     <p>This site provides fast, secure, and reliable chatting with Keanu Reeves the original founder of this site.</p>
   </div>
-  <div class="footer-section">
+  <div class="base2-footer-section">
     <h4>Quick Links</h4>
     <a href="{% url 'home' %}">Home</a>
     <a href="{% url 'author' %}">Author</a>
     <a href="{% url 'donate' %}">Donate</a>
     <a href="{% url 'fanscard_list' %}">Buy Your Fans Card</a>
   </div>
-  <div class="footer-section">
-    <h4>Contact Us</h4>
-    <p>Email: support@Keanureeves.com</p>
-    <p>Phone: +1 234 567 890</p>
-  </div>
-  <div class="footer-bottom">&copy; {{ year }} Keanu Reeves. All rights reserved.</div>
+  <div class="base2-footer-bottom">&copy; {{ year }} Keanu Reeves. All rights reserved.</div>
 </footer>
 
 <audio id="notifySound" src="{% static 'sounds/notification.wav' %}" preload="auto"></audio>
 
 <script>
-  function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('show');
-  }
-
   function updateUnreadCount() {
     fetch("{% url 'get_unread_count' %}")
       .then(response => response.json())
@@ -348,13 +322,13 @@
   }
 
   function showPopup(message) {
-    const container = document.querySelector('.toast-wrapper') || createToastContainer();
+    const container = document.querySelector('.base2-toast-wrapper') || createToastContainer();
     const toast = document.createElement('div');
-    toast.className = 'toast info';
+    toast.className = 'base2-toast info';
     toast.innerHTML = `
-      <span class="toast-icon">ℹ️</span>
-      <span class="toast-text">${message}</span>
-      <span class="toast-close" onclick="this.parentElement.remove()">✖</span>
+      <span class="base2-toast-icon">ℹ️</span>
+      <span class="base2-toast-text">${message}</span>
+      <span class="base2-toast-close" onclick="this.parentElement.remove()">✖</span>
     `;
     container.appendChild(toast);
 
@@ -367,7 +341,7 @@
 
   function createToastContainer() {
     const container = document.createElement('div');
-    container.className = 'toast-wrapper';
+    container.className = 'base2-toast-wrapper';
     document.body.appendChild(container);
     return container;
   }
@@ -379,14 +353,6 @@
 
   setInterval(updateUnreadCount, 5000);
   setInterval(checkForNewMessages, 5000);
-
-  setTimeout(() => {
-    document.querySelectorAll('.toast').forEach(toast => {
-      toast.style.opacity = '0';
-      toast.style.transform = 'translateX(100px)';
-      setTimeout(() => toast.remove(), 500);
-    });
-  }, 5000);
 </script>
 
 </body>
