@@ -1,0 +1,70 @@
+{% extends 'base3.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<style>
+  .change-username-page .unique-form-container {
+    max-width: 450px;
+    margin: 100px auto;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #444;
+    color: #eee;
+    text-align: center;
+  }
+
+  .change-username-page .unique-form-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .change-username-page .unique-input-field {
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .change-username-page .unique-submit-btn {
+    background: #f44336;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .change-username-page .unique-submit-btn:hover {
+    background: #d32f2f;
+  }
+
+  .change-username-page .unique-message {
+    color: #90ee90;
+    margin-top: 10px;
+  }
+</style>
+
+<div class="change-username-page">
+  <div class="unique-form-container">
+    <h2>Change Your Username</h2>
+    {% if messages %}
+      {% for message in messages %}
+        <p class="unique-message">{{ message }}</p>
+      {% endfor %}
+    {% endif %}
+    <form method="POST">
+      {% csrf_token %}
+      {{ form.username|add_class:"unique-input-field" }}
+      <button type="submit" class="unique-submit-btn">Update Username</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

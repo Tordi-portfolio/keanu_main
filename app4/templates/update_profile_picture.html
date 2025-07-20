@@ -1,0 +1,79 @@
+{% extends 'base3.html' %}
+{% block content %}
+
+<style>
+  .profile-section {
+    max-width: 450px;
+    margin: 80px auto;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #444;
+    color: #eee;
+    text-align: center;
+  }
+
+  .profile-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .profile-section input[type="file"] {
+    width: 100%;
+    background: #111;
+    color: #eee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+  }
+
+  .profile-section button {
+    background: #f44336;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .profile-section button:hover {
+    background: #d32f2f;
+  }
+
+  .message {
+    color: #90ee90;
+    margin-top: 10px;
+  }
+
+  .profile-picture-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid #444;
+  }
+</style>
+
+<div class="profile-section">
+  <h2>Update Profile Picture</h2>
+  {% if user.profile.profile_picture %}
+    <img src="{{ user.profile.profile_picture.url }}" alt="Current Profile Picture" class="profile-picture-preview">
+  {% endif %}
+  {% if messages %}
+    {% for message in messages %}
+      <p class="message">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Picture</button>
+  </form>
+</div>
+
+{% endblock %}

@@ -1,5 +1,7 @@
 {% load static %}
 
+{% load widget_tweaks %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -250,6 +252,7 @@
           Chat with Jason <span class="notif-badge" id="chatBadge"></span>
         </a>
       </li>
+      <li><a href="{% url 'settings' %}">Settings</a></li>
       <li><a href="{% url 'logout' %}">Logout ({{ user.username }})</a></li>
     {% else %}
       <li><a href="{% url 'login' %}">Login</a></li>

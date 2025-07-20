@@ -1,0 +1,54 @@
+{% extends 'base3.html' %}
+{% block content %}
+
+<style>
+  .delete-section {
+    max-width: 450px;
+    margin: 100px auto;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ff000040;
+    color: #eee;
+    text-align: center;
+  }
+
+  .delete-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ff4c4c;
+  }
+
+  .delete-section p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #ccc;
+  }
+
+  .delete-section button {
+    background: #ff1744;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .delete-section button:hover {
+    background: #d50000;
+  }
+
+</style>
+
+<div class="delete-section">
+  <h2>Delete Account</h2>
+  <p>Are you sure you want to delete your account? This action is <strong>permanent</strong>.</p>
+  <form method="POST">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete My Account</button>
+  </form>
+</div>
+
+{% endblock %}

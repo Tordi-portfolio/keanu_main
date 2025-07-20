@@ -5,13 +5,15 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import PrivateChat
+from app4.models import Profile
 from .forms import MessageForm, RegisterForm
 
 
 # ---------------- Home Page ----------------
 
 def home(request):
-    return render(request, 'home.html')
+    profile, created = Profile.objects.get_or_create(user=request.user)
+    return render(request, 'home.html', {'profile': profile})
 
 
 # ---------------- Authentication ----------------

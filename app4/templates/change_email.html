@@ -1,0 +1,67 @@
+{% extends 'base3.html' %}
+{% block content %}
+
+<style>
+  .form-section {
+    max-width: 450px;
+    margin: 80px auto;
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #444;
+    color: #eee;
+    text-align: center;
+  }
+
+  .form-section h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .form-section input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .form-section button {
+    background: #f44336;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-section button:hover {
+    background: #d32f2f;
+  }
+
+  .message {
+    color: #90ee90;
+    margin-top: 10px;
+  }
+</style>
+
+<div class="form-section">
+  <h2>Change Your Email</h2>
+  {% if messages %}
+    {% for message in messages %}
+      <p class="message">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Email</button>
+  </form>
+</div>
+
+{% endblock %}
