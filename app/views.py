@@ -12,8 +12,13 @@ from .forms import MessageForm, RegisterForm
 # ---------------- Home Page ----------------
 
 def home(request):
-    profile, created = Profile.objects.get_or_create(user=request.user)
-    return render(request, 'home.html', {'profile': profile})
+    if request.user.is_authenticated:
+        profile, created = Profile.objects.get_or_create(user=request.user)
+        context = {'profile': profile}
+    else:
+        context = {'profile': None}  # or something else for anonymous users
+    return render(request, 'home.html', context)
+
 
 
 # ---------------- Authentication ----------------
