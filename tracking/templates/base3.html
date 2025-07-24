@@ -220,22 +220,19 @@
   <button class="base2-menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('show')">☰</button>
   <ul class="base2-nav-links" id="navLinks">
     <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="{% url 'author' %}">Author</a></li>
-    <li><a href="{% url 'gallary' %}">Movies</a></li>
-    <li><a href="{% url 'gallery' %}">Gallery</a></li>
     <li><a href="{% url 'sell' %}">Market Place</a></li>
-    <li><a href="{% url 'donation_text' %}">Donation</a></li>
-    <li><a href="{% url 'moodley' %}">Krishnie Moodley</a></li>
+
     {% if user.is_authenticated %}
       <li><a href="{% url 'track_shipment' %}">Track Shipment</a></li>
       <li>
         <a href="{% url 'chat_with_admin' %}">
-          Chat with Jason <span class="base2-notif-badge" id="chatBadge"></span>
+          Chat with Keanu <span class="base2-notif-badge" id="chatBadge"></span>
         </a>
       </li>
-      <li><a href="{% url 'settings' %}">Settings</a></li>
+      <li><a href="{% url 'more' %}">More</a></li>
       <li><a href="{% url 'logout' %}">Logout ({{ user.username }})</a></li>
     {% else %}
+      <li><a href="{% url 'news_list' %}">News</a></li>
       <li><a href="{% url 'login' %}">Login</a></li>
       <li><a href="{% url 'register' %}">Register</a></li>
     {% endif %}

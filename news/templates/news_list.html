@@ -1,0 +1,120 @@
+{% extends 'base3.html' %}
+
+{% block content %}
+<style>
+  :root {
+    --accent-color: #ff3c00;
+  }
+
+  .news-list-page {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    min-height: 100vh;
+    padding: 2rem;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+  }
+
+  .news-list-page .container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .news-list-page h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 8px rgba(255, 60, 0, 0.5);
+  }
+
+  .news-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 60, 0, 0.15);
+    backdrop-filter: blur(6px);
+    animation: fadeInUp 0.8s ease;
+    transition: transform 0.3s;
+  }
+
+  .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.3);
+  }
+
+  .news-card h2 a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.8rem;
+  }
+
+  .news-card p.date {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 10px 0;
+  }
+
+  .news-card p.preview {
+    color: #ddd;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .news-card a.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    background: var(--accent-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: 0.3s;
+  }
+
+  .news-card a.read-more:hover {
+    background: #e04100;
+    box-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .news-list-page h1 {
+      font-size: 2rem;
+    }
+
+    .news-card h2 a {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
+<div class="news-list-page">
+  <div class="container">
+    <h1>News Update</h1>
+
+    {% for post in posts %}
+      <div class="news-card">
+        <h2><a href="{% url 'news_details' post.pk %}">{{ post.title }}</a></h2>
+        <p class="date">{{ post.created_at|date:"F d, Y \\a\\t H:i A" }}</p>
+        <p class="preview">{{ post.body|truncatewords:20 }}</p>
+        <a href="{% url 'news_details' post.pk %}" class="read-more">Read More</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+

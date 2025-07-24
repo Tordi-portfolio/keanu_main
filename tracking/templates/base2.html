@@ -239,22 +239,18 @@
   <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   <ul class="nav-links" id="navLinks">
     <li><a href="{% url 'home' %}">Home</a></li>
-    <li><a href="{% url 'author' %}">Author</a></li>
-    <li><a href="{% url 'gallary' %}">Movies</a></li>
-    <li><a href="{% url 'gallery' %}">Gallery</a></li>
     <li><a href="{% url 'sell' %}">Market Place</a></li>
-    <li><a href="{% url 'donation_text' %}">Donation</a></li>
-    <li><a href="{% url 'moodley' %}">Krishnie Moodley</a></li>
     {% if user.is_authenticated %}
       <li><a href="{% url 'track_shipment' %}">Track Shipment</a></li>
       <li>
         <a href="{% url 'chat_with_admin' %}">
-          Chat with Jason <span class="notif-badge" id="chatBadge"></span>
+          Chat with Keanu <span class="notif-badge" id="chatBadge"></span>
         </a>
       </li>
-      <li><a href="{% url 'settings' %}">Settings</a></li>
+      <li><a href="{% url 'more' %}">More</a></li>
       <li><a href="{% url 'logout' %}">Logout ({{ user.username }})</a></li>
     {% else %}
+      <li><a href="{% url 'news_list' %}">News</a></li>
       <li><a href="{% url 'login' %}">Login</a></li>
       <li><a href="{% url 'register' %}">Register</a></li>
     {% endif %}
@@ -273,6 +269,27 @@
   </ul>
 </nav>
 
+{% if user.is_authenticated %}
+
+{% if messages %}
+<div class="toast-wrapper">
+  {% for message in messages %}
+    <div class="toast {{ message.tags }}">
+      <span class="toast-icon">
+        {% if message.tags == 'success' %} ✅
+        {% elif message.tags == 'error' or message.tags == 'danger' %} ❌
+        {% elif message.tags == 'info' %} ℹ️
+        {% else %} ⚠️ {% endif %}
+      </span>
+      <span class="toast-text">{{ message }}, Welcome {{ user.username }}</span>
+      <span class="toast-close" onclick="this.parentElement.remove()">✖</span>
+    </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+{% else %}
+
 {% if messages %}
 <div class="toast-wrapper">
   {% for message in messages %}
@@ -288,6 +305,8 @@
     </div>
   {% endfor %}
 </div>
+{% endif %}
+
 {% endif %}
 
 {% block content %} {% endblock %}

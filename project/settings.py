@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'tracking',
     'app4',
     'widget_tweaks',
+    'news',
 ]
 
 MIDDLEWARE = [

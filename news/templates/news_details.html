@@ -1,0 +1,104 @@
+{% extends 'base3.html' %}
+
+{% block content %}
+<style>
+  :root {
+    --highlight: #ff3c00;
+  }
+
+  .news-details-page {
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    color: #eee;
+  }
+
+  .news-details-page .container {
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 35px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 60, 0, 0.15);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1.2s ease-in-out;
+  }
+
+  .news-details-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--highlight);
+    text-shadow: 2px 2px 8px rgba(255, 60, 0, 0.4);
+    text-align: center;
+  }
+
+  .news-details-page .meta {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .news-details-page p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #ddd;
+    text-align: justify;
+  }
+
+  .news-details-page img,
+  .news-details-page video {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(255, 60, 0, 0.2);
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--highlight);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--highlight);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<div class="news-details-page">
+  <div class="container">
+    <a href="{% url 'news_list' %}" class="back-link">&larr; Back to News List</a>
+    <h1>{{ post.title }}</h1>
+    <div class="meta">Posted on {{ post.created_at|date:"F d, Y \\a\\t H:i A" }}</div>
+    <p>{{ post.body }}</p>
+
+    {% if post.image %}
+      <img src="{{ post.image.url }}" alt="News Image">
+    {% endif %}
+
+    {% if post.video %}
+      <video controls>
+        <source src="{{ post.video.url }}">
+        Your browser does not support the video tag.
+      </video>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
