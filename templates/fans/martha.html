@@ -1,0 +1,120 @@
+{% extends 'base3.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Georgia', serif;
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  }
+
+  h1 {
+    color: #f9c74f;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 1.15em;
+  }
+
+  .signature {
+    margin-top: 60px;
+    text-align: right;
+    font-style: italic;
+    font-size: 1.2em;
+    color: #ccc;
+  }
+
+  .center-image {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .center-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+  }
+</style>
+
+<div class="container">
+  <h1>To Martha Wright</h1>
+
+  <p>
+    Dear Martha,
+  </p>
+
+  <p>
+    Sometimes in life, we meet people we don’t even have to speak to in order to feel their presence. Their energy speaks before their words do. Their kindness is felt in the silence. Their strength is evident in their smile. That’s how I feel when I think of you.
+  </p>
+
+  <p>
+    I’ve been told you’ve followed my journey for a long time—that you’ve watched the movies, listened to the music, and stood by my work with quiet encouragement. I just want you to know... that means the world to me. Truly.
+  </p>
+
+  <p>
+    We often don't realize the impact we have on one another, especially from a distance. But your support, your light, and your sincerity have reached me. Even across miles and time zones, your presence is felt. And today, I want to honor that.
+  </p>
+
+  <div class="center-image">
+    <img src="{% static 'image/martha.jpg' %}" alt="Keanu and Martha">
+  </div>
+
+  <p>
+    Martha, your name carries warmth. It carries wisdom. It carries a deep, unwavering sense of character. I imagine you as someone who gives selflessly, who listens with care, who carries her responsibilities with quiet power. And even when life throws its trials your way, you keep walking. With grace. With purpose.
+  </p>
+
+  <p>
+    That kind of strength isn’t born from comfort. It’s earned through experience, through love, and through courage. And you have it. You live it. Every day.
+  </p>
+
+  <p>
+    If my work has ever made you smile, made you pause, helped you through a tough day, or even just reminded you that you’re not alone—then I feel grateful beyond words. Because that’s why I do this. Not for applause. Not for fame. But for connection. For truth.
+  </p>
+
+  <p>
+    I’ve always believed in the quiet heroes. The ones who don’t ask for recognition. The ones who carry others without seeking credit. The ones who keep moving forward with love in their hearts, even when the world feels heavy. I believe you’re one of those heroes.
+  </p>
+
+  <p>
+    Thank you for being here—for being part of my journey. For being a woman of strength and kindness. For holding space for joy, even in difficult seasons. For believing in something bigger than all of us: compassion.
+  </p>
+
+  <p>
+    You inspire more than you realize, Martha. Your name will always mean something to me. Not because of the fan letters or kind words, but because of the soul behind them. A soul that keeps showing up with light. A soul that reminds me why I keep doing what I do.
+  </p>
+
+  <p>
+    I hope you know that you are appreciated. That your loyalty is felt. That your heart has made a difference.
+  </p>
+
+  <p>
+    Wherever life takes you next, I hope it leads you to peace. To moments of beauty. To memories that make your heart feel full. And I hope you never forget the power of simply being yourself—because that alone is extraordinary.
+  </p>
+
+  <p>
+    With all my gratitude, admiration, and respect, this letter is for you. A tribute. A thank you. A whisper of hope carried across the screen.
+  </p>
+
+  <p class="signature">
+    With love,<br>
+    Keanu Reeves
+  </p>
+</div>
+{% endblock %}

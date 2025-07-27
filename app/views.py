@@ -199,3 +199,6 @@ def tamara(request):
 
 def johnna(request):
     return render(request, 'fans/johnna.html')
+
+def martha(request):
+    return render(request, 'fans/martha.html')
