@@ -281,7 +281,7 @@
         {% elif message.tags == 'info' %} ℹ️
         {% else %} ⚠️ {% endif %}
       </span>
-      <span class="toast-text">{{ message }}, Welcome {{ user.username }}</span>
+      <span class="toast-text">{{ message }}, Welcome ({{ user.username }})</span>
       <span class="toast-close" onclick="this.parentElement.remove()">✖</span>
     </div>
   {% endfor %}
@@ -324,9 +324,6 @@
     <a href="{% url 'fanscard_list' %}">Buy Your Fans Card</a>
   </div>
   <div class="footer-section">
-    <h4>Contact Us</h4>
-    <p>Email: support@Keanureeves.com</p>
-    <p>Phone: +1 234 567 890</p>
   </div>
   <div class="footer-bottom">&copy; {{ year }} Keanu Reeves. All rights reserved.</div>
 </footer>

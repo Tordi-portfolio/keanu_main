@@ -1,6 +1,10 @@
-{% extends 'base2.html' %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keanu Chat</title>
+    
 <style>
   body {
     background: linear-gradient(120deg, #0d0d0d, #1a1a1a);
@@ -226,7 +230,8 @@
 </style>
 
 <div class="chat-container">
-  <div class="chat-title">Chat with Admin</div>
+  <a style="margin-bottom: 10px;" href="{% url 'home' %}"> <button class="send-btn"> Home</button> </a>
+  <div class="chat-title"></div>
 
   <div class="chat-box" id="chatBox">
     {% for msg in messages %}
@@ -362,4 +367,6 @@
     }
   });
 </script>
-{% endblock %}
+
+</body>
+</html>

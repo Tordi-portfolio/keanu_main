@@ -193,3 +193,9 @@ def get_unread_count(request):
 
 def moodley(request):
     return render(request, 'fans/moodley.html')
+
+def tamara(request):
+    return render(request, 'fans/tamara.html')
+
+def johnna(request):
+    return render(request, 'fans/johnna.html')

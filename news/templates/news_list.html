@@ -107,12 +107,14 @@
     <h1>News Update</h1>
 
     {% for post in posts %}
+    <a href="{% url 'news_details' post.pk %}">
       <div class="news-card">
         <h2><a href="{% url 'news_details' post.pk %}">{{ post.title }}</a></h2>
         <p class="date">{{ post.created_at|date:"F d, Y \\a\\t H:i A" }}</p>
         <p class="preview">{{ post.body|truncatewords:20 }}</p>
         <a href="{% url 'news_details' post.pk %}" class="read-more">Read More</a>
       </div>
+    </a>
     {% endfor %}
   </div>
 </div>

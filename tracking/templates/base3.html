@@ -261,7 +261,7 @@
         {% elif message.tags == 'info' %} ℹ️
         {% else %} ⚠️ {% endif %}
       </span>
-      <span class="base2-toast-text">{{ message }}</span>
+      <span class="base2-toast-text">{{ message }} Welcome ({{ user.username }})</span>
       <span class="base2-toast-close" onclick="this.parentElement.remove()">✖</span>
     </div>
   {% endfor %}
