@@ -208,3 +208,6 @@ def fanspage(request):
 
 def madelena(request):
     return render(request, 'fans/madelena.html')
+
+def lucie(request):
+    return render(request, 'fans/lucie.html')

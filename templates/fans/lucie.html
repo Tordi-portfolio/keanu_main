@@ -1,0 +1,115 @@
+{% extends 'base3.html' %}
+
+{% load static %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .tribute-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+    img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+        margin: 20px 0;
+    }
+    .language-buttons {
+        margin-bottom: 30px;
+    }
+    .language-buttons button {
+        background-color: #444;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .language-buttons button:hover {
+        background-color: #666;
+    }
+    .pt, .en {
+        display: none;
+        text-align: left;
+        margin-top: 20px;
+        line-height: 1.8;
+        font-size: 1.1em;
+    }
+    .active {
+        display: block;
+    }
+</style>
+
+<div class="tribute-container">
+    <h1>Lucie</h1>
+    <img src="{% static 'image/lucie.jpg' %}" alt="Lucie Tribute Photo">
+
+    <div class="language-buttons">
+        <button onclick="showLang('en')">English</button>
+        <button onclick="showLang('pt')">Português</button>
+    </div>
+
+    <div class="en active">
+        <p>
+        Lucie,  
+        <br><br>
+        There are rare souls who walk among us — sincere, grounded, kind beyond measure — and I consider myself lucky to have come across one: you. Your honesty is like sunlight through storm clouds. In a world that often rushes to impress and pretend, your truth stands still, steady, and inspiring.  
+        <br><br>
+        When I think of the word "sincere," your name rises quietly in my mind. You don’t speak to impress, you speak to express, to connect — and in that, you create moments that stay with me. You remind me to be present. You remind me that being real is still the highest form of beauty.  
+        <br><br>
+        There’s a comfort in your words — like a favorite song or a quiet fire — something that speaks not just to ears, but to the soul. You have that kind of magic. A presence that feels like home, even in chaos.  
+        <br><br>
+        I want you to know that your sincerity makes a difference. Whether you realize it or not, the ripples of your truth affect the hearts around you. People feel seen around you, because you see with your heart. That’s rare. That’s powerful. That’s you.  
+        <br><br>
+        Thank you for your honesty. For showing up in this life as yourself. For making the world gentler just by being in it. From one soul to another — I see you, Lucie. And I appreciate every bit of who you are.  
+        <br><br>
+        With sincerity and gratitude,  
+        <br>
+        —Keanu
+        </p>
+    </div>
+
+    <div class="pt">
+        <p>
+        Lucie,  
+        <br><br>
+        Existem almas raras que caminham entre nós — sinceras, equilibradas, bondosas além da medida — e me considero afortunado por ter encontrado uma: você. Sua honestidade é como a luz do sol atravessando nuvens escuras. Em um mundo que muitas vezes corre para impressionar e fingir, sua verdade permanece firme, serena e inspiradora.  
+        <br><br>
+        Quando penso na palavra "sincera", seu nome surge em minha mente. Você não fala para impressionar, fala para se conectar — e nisso, cria momentos que permanecem. Você me lembra de estar presente. Me lembra que ser real ainda é a forma mais bela de ser.  
+        <br><br>
+        Há um conforto em suas palavras — como uma música favorita ou uma lareira acesa — algo que fala não apenas aos ouvidos, mas à alma. Você tem esse tipo de magia. Uma presença que parece um lar, mesmo no meio do caos.  
+        <br><br>
+        Quero que saiba que sua sinceridade faz diferença. Quer perceba ou não, os reflexos da sua verdade tocam os corações ao redor. As pessoas se sentem vistas por você, porque você enxerga com o coração. Isso é raro. Isso é poderoso. Isso é você.  
+        <br><br>
+        Obrigado por sua honestidade. Por aparecer na vida sendo exatamente quem você é. Por tornar o mundo mais suave apenas por estar nele. De uma alma para outra — eu vejo você, Lucie. E aprecio cada parte do que você é.  
+        <br><br>
+        Com sinceridade e gratidão,  
+        <br>
+        —Keanu
+        </p>
+    </div>
+</div>
+
+<script>
+    function showLang(lang) {
+        document.querySelector('.en').classList.remove('active');
+        document.querySelector('.pt').classList.remove('active');
+        document.querySelector('.' + lang).classList.add('active');
+    }
+</script>
+
+{% endblock %}
