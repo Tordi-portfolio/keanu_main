@@ -202,3 +202,9 @@ def johnna(request):
 
 def martha(request):
     return render(request, 'fans/martha.html')
+
+def fanspage(request):
+    return render(request, 'fanspage.html')
+
+def madelena(request):
+    return render(request, 'fans/madelena.html')

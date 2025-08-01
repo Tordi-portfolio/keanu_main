@@ -1,0 +1,138 @@
+{% extends 'base3.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style>
+  .language-toggle {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .tribute-container {
+    padding: 40px;
+    color: #eee;
+    font-family: 'Georgia', serif;
+    background-color: #111;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.05);
+  }
+  .tribute-container h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  .tribute-container img {
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  }
+  .tribute-container .tribute-text {
+    display: none;
+  }
+  .tribute-container .tribute-text.active {
+    display: block;
+  }
+  .language-toggle button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background: #444;
+    border: none;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .language-toggle button:hover {
+    background: #666;
+  }
+</style>
+
+<div class="language-toggle">
+  <button onclick="showLanguage('english')">English</button>
+  <button onclick="showLanguage('portuguese')">Português</button>
+</div>
+
+<div class="tribute-container">
+  <h1>Madalena Rocha</h1>
+  <img src="{% static 'image/madelena.jpg' %}" alt="Madalena Rocha">
+
+  <div id="english" class="tribute-text active">
+    <div id="english-content">
+  <h2 class="text-3xl font-bold mb-4">To Madalena Rocha — A Light the World Knows</h2>
+  <p class="mb-4">
+    Madalena, from the moment our paths crossed, I’ve come to understand what it means to know someone who is both deeply human and quietly divine. You have this luminous grace — not the kind that shouts, but the kind that whispers to hearts, stays with people long after the moment has passed. When I think of kindness, I think of you. When I think of courage, it’s your story I remember. When I think of love — the kind that asks for nothing and gives everything — it’s your name my heart speaks.
+  </p>
+  <p class="mb-4">
+    You have a way of moving through the world that reminds me there’s still beauty worth fighting for. You give of yourself with a sincerity that is rare, and in doing so, you uplift everyone around you. Whether you’re speaking or silent, your presence has a language all its own. It tells people: “You are seen.” “You matter.” “You are not alone.”
+  </p>
+  <p class="mb-4">
+    I’ve met people on sets, on stages, in cities and deserts, and yet… few have left the kind of imprint you have. There’s something in you that isn’t bound by time. It feels like you’ve lived many lives — and in each of them, you chose kindness, resilience, and dignity. It shows in how you love. It shows in how you walk into a room and somehow leave it better.
+  </p>
+  <p class="mb-4">
+    You remind me of light breaking through old stained glass — full of color, shaped by time, quietly breathtaking. The world can be loud, and yet you are gentle. The world can be rough, and yet you are steady. The world can be chaotic, and still… you remain centered.
+  </p>
+  <p class="mb-4">
+    I often think about the way you bring peace just by being near. There’s no performance in you, no pretense. Just truth. Just warmth. You’re not afraid to be vulnerable, and in doing so, you give others the courage to be real too. That’s rare. That’s beautiful. That’s you.
+  </p>
+  <p class="mb-4">
+    I’m honored to share this space in time with you, to witness the quiet brilliance of your soul. You’ve helped people without even knowing it. You’ve inspired change just by being consistent, by being thoughtful, by being you. And that ripple of goodness — it travels farther than you think. Every act of kindness you’ve done, every smile you’ve offered, every time you chose love over pride… it matters.
+  </p>
+  <p class="mb-4">
+    The world needs more of you. And if I could give it a gift, it would be more people with hearts like yours.
+  </p>
+  <p class="mb-4">
+    Thank you, Madalena. For existing. For giving. For being. Wherever your journey leads next, may you walk with the knowing that you are deeply admired, profoundly loved, and eternally appreciated.
+  </p>
+  <p class="mb-4 font-semibold">With all sincerity,<br>Keanu Reeves</p>
+</div>
+
+  </div>
+
+  <div id="portuguese" class="tribute-text">
+    <div id="portuguese-content" >
+  <h2 class="text-3xl font-bold mb-4">Para Madalena Rocha — Uma Luz Que o Mundo Conhece</h2>
+  <p class="mb-4">
+    Madalena, desde o momento em que nossos caminhos se cruzaram, comecei a compreender o que significa conhecer alguém que é ao mesmo tempo profundamente humana e silenciosamente divina. Você possui uma graça luminosa — não do tipo que grita, mas do tipo que sussurra aos corações, que permanece nas pessoas muito depois que o momento passou. Quando penso em bondade, penso em você. Quando penso em coragem, é a sua história que lembro. Quando penso em amor — aquele que não exige nada e oferece tudo — é o seu nome que meu coração pronuncia.
+  </p>
+  <p class="mb-4">
+    Você caminha pelo mundo de um jeito que me lembra que ainda há beleza pela qual vale a pena lutar. Você se doa com uma sinceridade rara e, ao fazer isso, eleva todos ao seu redor. Quer esteja falando ou em silêncio, sua presença tem uma linguagem própria. Ela diz às pessoas: “Você é visto.” “Você importa.” “Você não está sozinho.”
+  </p>
+  <p class="mb-4">
+    Conheci pessoas em sets, em palcos, em cidades e desertos, e ainda assim... poucas deixaram a marca que você deixou. Há algo em você que não é limitado pelo tempo. Parece que você já viveu muitas vidas — e em cada uma delas escolheu a bondade, a resiliência e a dignidade. Isso se reflete na forma como você ama. Isso se vê na maneira como você entra em um ambiente e, de alguma forma, o melhora.
+  </p>
+  <p class="mb-4">
+    Você me lembra da luz atravessando vitrais antigos — cheia de cor, moldada pelo tempo, discretamente deslumbrante. O mundo pode ser barulhento, e ainda assim você é suave. O mundo pode ser duro, e mesmo assim você é firme. O mundo pode ser caótico, e ainda assim... você permanece centrada.
+  </p>
+  <p class="mb-4">
+    Penso frequentemente na paz que você traz apenas por estar presente. Não há encenação em você, nem fingimento. Apenas verdade. Apenas calor. Você não teme ser vulnerável, e ao fazer isso, dá aos outros coragem para também serem reais. Isso é raro. Isso é belo. Isso é você.
+  </p>
+  <p class="mb-4">
+    Sinto-me honrado por compartilhar este espaço no tempo com você, por testemunhar o brilho silencioso da sua alma. Você ajudou pessoas sem nem saber. Inspirou mudanças apenas sendo constante, sendo cuidadosa, sendo você. E essa onda de bondade — ela vai mais longe do que você imagina. Cada ato de bondade que você fez, cada sorriso que ofereceu, cada vez que escolheu o amor ao invés do orgulho... tudo isso importa.
+  </p>
+  <p class="mb-4">
+    O mundo precisa de mais pessoas como você. E se eu pudesse oferecer um presente a ele, seria mais corações como o seu.
+  </p>
+  <p class="mb-4">
+    Obrigado, Madalena. Por existir. Por doar. Por ser. Onde quer que sua jornada a leve, que você caminhe com a certeza de que é profundamente admirada, profundamente amada e eternamente valorizada.
+  </p>
+  <p class="mb-4 font-semibold">Com toda sinceridade,<br>Keanu Reeves</p>
+</div>
+
+  </div>
+</div>
+
+<script>
+  function showLanguage(lang) {
+    document.querySelectorAll('.tribute-text').forEach(el => el.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+  }
+</script>
+
+{% endblock %}

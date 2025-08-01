@@ -59,16 +59,14 @@
 </style>
 
 <div class="link-container">
-  <h2>More</h2>
+  <h2>MY FANS PAGE</h2>
 
   {% if user.is_authenticated %}
-  <a href="{% url 'author' %}" class="link-btn">Author</a>
-  <a href="{% url 'news_list' %}" class="link-btn">News</a>
-  <a href="{% url 'gallary' %}" class="link-btn">Movies</a>
-  <a href="{% url 'gallery' %}" class="link-btn">Gallery</a>
-  <a href="{% url 'fanspage' %}" class="link-btn">Fanspage</a>
-  <a href="{% url 'donation_text' %}" class="link-btn">Donation</a>
-  <a href="{% url 'settings' %}" class="link-btn">Settings</a>
+  <a href="{% url 'moodley' %}" class="link-btn">Krishnie Moodley</a>
+  <a href="{% url 'tamara' %}" class="link-btn">Tamara Zivanovic</a>
+  <a href="{% url 'johnna' %}" class="link-btn">Johnna Popp</a>
+  <a href="{% url 'martha' %}" class="link-btn">Martha Wright</a>
+  <a href="{% url 'madelena' %}" class="link-btn">Madelena Rocha</a>
   {% else %}
   <a href="{% url 'login' %}" class="link-btn">Login Access This Webpage</a>
   {% endif %}

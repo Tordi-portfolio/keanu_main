@@ -18,4 +18,6 @@ urlpatterns = [
     path('tamara/', views.tamara, name='tamara'),
     path('johnna/', views.johnna, name='johnna'),
     path('martha/', views.martha, name='martha'),
+    path('fanspage/', views.fanspage, name='fanspage'),
+    path('madelena', views.madelena, name='madelena'),
 ]
