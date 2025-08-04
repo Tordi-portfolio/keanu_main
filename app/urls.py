@@ -23,5 +23,5 @@ urlpatterns = [
     path('madelena', views.madelena, name='madelena'),
     path('lucie', views.lucie, name='lucie'),
 
-    path('moodley', views.moodley, name='moodley'),
+    path('moodley1', views.moodley1, name='moodley1'),
 ]

@@ -212,8 +212,8 @@ def madelena(request):
 def lucie(request):
     return render(request, 'fans/lucie.html')
 
-def moodley(request):
-    return render(request, 'verified/moodley.html')
+def moodley1(request):
+    return render(request, 'verified/moodley1.html')
 
 def members(request):
     return render(request, 'members.html')
