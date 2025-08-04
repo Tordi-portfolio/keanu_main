@@ -59,15 +59,11 @@
 </style>
 
 <div class="link-container">
-  <h2>MY FANS PAGE</h2>
+  <h2>More</h2>
 
   {% if user.is_authenticated %}
-  <a href="{% url 'moodley' %}" class="link-btn">Krishnie Moodley</a>
-  <a href="{% url 'tamara' %}" class="link-btn">Tamara Zivanovic</a>
-  <a href="{% url 'johnna' %}" class="link-btn">Johnna Popp</a>
-  <a href="{% url 'martha' %}" class="link-btn">Martha Wright</a>
-  <a href="{% url 'madelena' %}" class="link-btn">Madelena Rocha</a>
-  <a href="{% url 'lucie' %}" class="link-btn">Lucie</a>
+  <a href="{% url 'moodley' %}" class="link-btn"></a>
+
   {% else %}
   <a href="{% url 'login' %}" class="link-btn">Login Access This Webpage</a>
   {% endif %}

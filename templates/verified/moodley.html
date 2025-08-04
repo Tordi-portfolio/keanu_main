@@ -1,0 +1,62 @@
+{% extends "base3.html" %}
+
+{% load static %}
+
+{% block content %}
+<style>
+  .krishnie-card {
+    background-color: #1a1a1a;
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    padding: 30px;
+    display: block;
+    box-shadow: 0 0 25px #4CAF50;
+    max-width: 700px;
+    text-align: center;
+    color: #ffffff;
+    margin: 40px auto;
+  }
+
+  .krishnie-card img {
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+    border-radius: 5%;
+    border: 3px solid #4CAF50;
+    margin-bottom: 20px;
+  }
+
+  .verified-badge {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.6em;
+    margin-top: 10px;
+  }
+
+  .member-name {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .krishnie-card p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+  }
+</style>
+
+<div class="krishnie-card">
+  <img src="{% static 'member/moodley.jpg' %}" alt="Krishnie Moodley">
+  <div class="member-name">Krishnie Moodley</div>
+  <div class="verified-badge">✅ Verified Member</div>
+  <p>
+    We are proud to officially recognize <strong>Krishnie Moodley</strong> as a verified member of the Keanu Reeves Official Fan Club. Her dedication, love, and admiration for Keanu Reeves have been nothing short of inspiring. Krishnie represents what it means to be a true fan — respectful, loyal, and passionate about everything Keanu stands for: kindness, humility, and grace.
+  </p>
+  <p>
+    As a cherished member of our global fan family, Krishnie's support adds warmth and strength to our community. Her heartfelt messages, encouraging spirit, and unwavering belief in Keanu's journey make her truly exceptional. She is not just a fan — she’s a light in the fandom.
+  </p>
+  <p>
+    With this official recognition, we honor her beautiful energy, her compassion, and her faith in the goodness that Keanu brings to the world. Welcome to a club that celebrates not just a man, but the connections and friendships he inspires.
+  </p>
+</div>
+{% endblock %}
